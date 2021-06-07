@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>GitHub基本命令</title>
+    <url>/2021/06/06/GitHub%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<span id="more"></span>
+
+
+
+
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git init 新建一个空的仓库</span><br><span class="line">git status 查看状态</span><br><span class="line">git add . 添加文件</span><br><span class="line">git commit -m &#x27;注释&#x27; 提交添加的文件并备注说明</span><br><span class="line">git remote add origin git@github.com:jinzhaogit/git.git 连接远程仓库</span><br><span class="line">git push -u origin master 将本地仓库文件推送到远程仓库</span><br><span class="line">git log 查看变更日志</span><br><span class="line">git reset --hard 版本号前六位 回归到指定版本</span><br><span class="line">git branch 查看分支</span><br><span class="line">git branch newname 创建一个叫newname的分支</span><br><span class="line">git checkout newname 切换到叫newname的分支上</span><br><span class="line">git merge newname 把newname分支合并到当前分支上</span><br><span class="line">git pull origin master 将master分支上的内容拉到本地上</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo-next主题配置</title>
+    <url>/2021/06/07/hexo-next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/***/themes/next/_config.yml #此路径为主题配置文件</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="hexo-next主题配置说明"><a href="#hexo-next主题配置说明" class="headerlink" title="hexo-next主题配置说明"></a>hexo-next主题配置说明</h2><p>官网说明：<a href="https://hexo.io/zh-cn/docs/configuration.html">https://hexo.io/zh-cn/docs/configuration.html</a></p>
+<h3 id="修改头像"><a href="#修改头像" class="headerlink" title="修改头像"></a>修改头像</h3><p>在主题配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">avatar: /images/avatar.gif</span><br><span class="line"># avatar.gif 要放在/***/themes/next/source/images/*</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="代码高亮显示"><a href="#代码高亮显示" class="headerlink" title="代码高亮显示"></a>代码高亮显示</h3><p>NexT 使用 Tomorrow Theme作为代码高亮，共有5款主题供你选择。 NexT 默认使用的是 白色的 normal 主题，可选的值有 normal，night， night blue， night bright， night eighties<br>更改 <font color="red">主题配置文件</font>中的highlight_theme 字段，将其值设定成你所喜爱的高亮主题即可。</p>
+<h3 id="侧边栏社交链接"><a href="#侧边栏社交链接" class="headerlink" title="侧边栏社交链接"></a>侧边栏社交链接</h3><p>侧栏社交链接的修改包含两个部分， 配置在 <strong>主题配置文件</strong> 中。<code>social</code>字段为连接，格式为<code>显示文本: 链接地址 || Font Awesome图标名称</code><br>例如：</p>
+<h3 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h3><p><font color="red">主题配置文件</font>  选哪个去掉#</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置外链接"><a href="#配置外链接" class="headerlink" title="配置外链接"></a>配置外链接</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#social:</span><br><span class="line">  #GitHub: https://github.com/yourname || github</span><br><span class="line">  #E-Mail: mailto:yourname@gmail.com || envelope</span><br><span class="line">  #Google: https://plus.google.com/yourname || google</span><br><span class="line">  #Twitter: https://twitter.com/yourname || twitter</span><br><span class="line">  #FB Page: https://www.facebook.com/yourname || facebook</span><br><span class="line">  #VK Group: https://vk.com/yourname || vk</span><br><span class="line">  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span><br><span class="line">  #YouTube: https://youtube.com/yourname || youtube</span><br><span class="line">  #Instagram: https://instagram.com/yourname || instagram</span><br><span class="line">  #Skype: skype:yourname?call|chat || skype</span><br></pre></td></tr></table></figure>
+
+<h2 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a>搜索功能</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-generator-searchdb --save # 安装插件</span><br><span class="line"><span class="meta">#</span><span class="bash"> 站点添加</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br><span class="line"><span class="meta">#</span><span class="bash"> 主题配置文件 /***/themes/next/_config.yml <span class="comment">#此路径为主题配置文件</span></span></span><br><span class="line">local_search:</span><br><span class="line">  enable: true # 默认是false</span><br></pre></td></tr></table></figure>
+
+<h2 id="统计文档字数"><a href="#统计文档字数" class="headerlink" title="统计文档字数"></a>统计文档字数</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-wordcount@2 --save # 安装插件</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 主题配置文件 /***/themes/next/_config.yml <span class="comment">#此路径为主题配置文件 修改值</span></span></span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: false</span><br><span class="line">  totalcount: false</span><br><span class="line">  separated_meta: true</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo搭建博客笔记</title>
+    <url>/2021/06/06/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
+<li>GitHub账号</li>
+<li>安装nodejs、npm环境</li>
+</ul>
+<h3 id="github-配置"><a href="#github-配置" class="headerlink" title="github 配置"></a>github 配置</h3><p>新建一个名为<font color="red">你的用户名.github.io</font>的仓库，每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库。</p>
+<p>还需要在项目 Settings 配置一下GitHub Pages</p>
+<span id="more"></span>
+
+<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>可以不绑定、默认是 用户名.github.io访问、这里先不介绍。</p>
+<h3 id="配置SSH-KEY"><a href="#配置SSH-KEY" class="headerlink" title="配置SSH KEY"></a>配置SSH KEY</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/. ssh <span class="comment">#检查本机已存在的ssh密钥</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ssh-keygen -t rsa -C <span class="string">&quot;邮件地址&quot;</span> 生成key</span> </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ssh -T git@github.com <span class="comment"># 注意邮箱地址不用改</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git config --global user.name <span class="string">&quot;accountName&quot;</span>// 你的github用户名，非昵称</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git config --global user.email  <span class="string">&quot;xxx@163.com&quot;</span>// 填写你的github注册邮箱</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用hexo写博客"><a href="#使用hexo写博客" class="headerlink" title="使用hexo写博客"></a>使用hexo写博客</h3><p>hexo 官网：<a href="http://hexo.io/">http://hexo.io</a></p>
+<p>github: <a href="https://github.com/hexojs/hexo">https://github.com/hexojs/hexo</a></p>
+<h4 id="hexo-安装"><a href="#hexo-安装" class="headerlink" title="hexo 安装"></a>hexo 安装</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install -g hexo</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="初始化-命令"><a href="#初始化-命令" class="headerlink" title="初始化-命令"></a>初始化-命令</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /E/Workspaces/hexo/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo init</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> hexo会自动下载一些文件到这个目录，包括node_modules，目录结构如下图：</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo g <span class="comment"># 生成 generater</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo s <span class="comment"># 启动服务start</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 启动服务后访问</span> </span><br></pre></td></tr></table></figure>
+
+<p><a href="http://127.0.0.1:4000/">http://127.0.0.1:4000</a></p>
+<h4 id="目录说明"><a href="#目录说明" class="headerlink" title="目录说明"></a>目录说明</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source 是放自己的md文件 </span><br><span class="line">_config.yml 是配置文件</span><br><span class="line">themes 是放主题的</span><br><span class="line">public 是放hexo最后生成的HTML文件的，提交到github自动部署的</span><br></pre></td></tr></table></figure>
+
+<h4 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo -g #安装  </span><br><span class="line">npm update hexo -g #升级  </span><br><span class="line">hexo init #初始化</span><br><span class="line"></span><br><span class="line">####</span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br><span class="line"></span><br><span class="line">hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章</span><br><span class="line">hexo p == hexo publish</span><br><span class="line">hexo g == hexo generate#生成</span><br><span class="line">hexo s == hexo server #启动服务预览</span><br><span class="line">hexo d == hexo deploy#部署</span><br><span class="line"></span><br><span class="line">hexo server #Hexo 会监视文件变动并自动更新，您无须重启服务器。</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line"></span><br><span class="line">hexo clean #清除缓存 网页正常情况下可以忽略此条命令</span><br><span class="line">hexo g #生成静态网页</span><br><span class="line">hexo d #开始部署</span><br><span class="line"></span><br><span class="line">hexo deploy -g</span><br><span class="line">hexo server -g</span><br><span class="line"></span><br><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span><br><span class="line">hexo deploy #将.deploy目录部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="主题修改"><a href="#主题修改" class="headerlink" title="主题修改"></a>主题修改</h4><p>官方主题：： <a href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">找到主题，git clone </span><br><span class="line"></span><br><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br><span class="line">git clone https://github.com/zhaoo/hexo-theme-zhaoo.git themes/zhaoo</span><br><span class="line">git clone https://github.com/frostfan/hexo-theme-polarbear.git  themes/polarbear</span><br><span class="line">git clone https://github.com/xrr2016/hexo-theme-cold-stone.git themes/cold-stone --depth 1</span><br><span class="line"># https://github.com/iissnan/hexo-theme-next</span><br><span class="line"># 使用这个需要手动安装</span><br><span class="line"> npm i hexo-renderer-swig</span><br><span class="line">$ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next</span><br><span class="line"># 本博客使用的是next主题</span><br><span class="line">然后修改 _config.yml配置文件</span><br><span class="line">theme: landscape #修改这个主题名字，是theme目录下的名字</span><br></pre></td></tr></table></figure>
+
+<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">修改 _config.yml配置文件 要用ssh链接</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/rocky1118/rocky1118.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d 命令错误的解决 </span><br><span class="line"><span class="meta">#</span><span class="bash"> 需要安装插件</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="md文档说明"><a href="#md文档说明" class="headerlink" title="md文档说明"></a>md文档说明</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: postName #文章页面上的显示名称，一般是中文</span><br><span class="line">date: 2021年6月6日22:16:55 #文章生成时间，一般不改，当然也可以任意修改</span><br><span class="line">categories: 默认分类 #分类</span><br><span class="line">tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格</span><br><span class="line">description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">以下是正文</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>**让文档不显示全部内容 **</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">在适当的位置加上</span><br><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="实现全站及文章字数统计及阅读时长"><a href="#实现全站及文章字数统计及阅读时长" class="headerlink" title="实现全站及文章字数统计及阅读时长"></a>实现全站及文章字数统计及阅读时长</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line">  total_symbols: true</span><br><span class="line">  total_time: true</span><br><span class="line"># 博客配置文件底部添加如下内容，保存。</span><br></pre></td></tr></table></figure>
+
+<h2 id="新建-MD-文件"><a href="#新建-MD-文件" class="headerlink" title="新建 MD 文件"></a>新建 MD 文件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page --path about/me &quot;About me&quot;</span><br></pre></td></tr></table></figure>
+
+<p>以上命令会创建一个 <code>source/about/me.md</code> 文件，同时 Front Matter 中的 title 为 <code>&quot;About me&quot;</code></p>
+<h2 id="添加搜索功能"><a href="#添加搜索功能" class="headerlink" title="添加搜索功能"></a>添加搜索功能</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>修改<font color="red">根目录</font>下的_config.yml（我的目录：E:\workspace_config.yml），在最底部添加如下配置</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br><span class="line"></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">search:</span> <span class="string">/search.xml</span> <span class="comment"># 添加</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 主题配置文件</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="通过hexo-admin管理文章"><a href="#通过hexo-admin管理文章" class="headerlink" title="通过hexo-admin管理文章"></a>通过hexo-admin管理文章</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-admin --save</span><br><span class="line">或</span><br><span class="line">cnpm install hexo-admin --save</span><br></pre></td></tr></table></figure>
+
+<p>访问 <a href="http://localhost:4000/admin">http://localhost:4000/admin</a></p>
+<h3 id="安全设置"><a href="#安全设置" class="headerlink" title="安全设置"></a>安全设置</h3><p>站点配置</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">admin:</span><br><span class="line">  username: 用户名</span><br><span class="line">  password_hash: md5密码</span><br><span class="line">  secret:  用于加密cookie的密码</span><br><span class="line">  deployCommand: <span class="string">&#x27;./admin_script.sh&#x27;</span> <span class="comment"># 自动提交脚本</span></span><br></pre></td></tr></table></figure>
+<p><strong>admin_script.sh</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/usr/bin/env sh</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g  -d</span><br></pre></td></tr></table></figure>
+
+<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo搭建博客笔记</span><br><span class="line">date: 2021年6月6日19:46:32</span><br><span class="line">tags: [hexo]</span><br><span class="line">categories: hexo</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">头部</span><br></pre></td></tr></table></figure>
+
+<h3 id="其他初始化页面"><a href="#其他初始化页面" class="headerlink" title="其他初始化页面"></a>其他初始化页面</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page &quot;about&quot; # 关于我 页面</span><br><span class="line">hexo new page &quot;categories&quot;  # 分类 页面</span><br><span class="line">hexo new page &quot;tags&quot; # 标签 页面</span><br></pre></td></tr></table></figure>
+
+<p>打开 <strong>/source/categories/index.md</strong>，设置其类型 type 值为“tages”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: 分类</span><br><span class="line">date: 2021-6-7 12:50:32</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+
+<p>打开 <strong>/source/tags/index.md</strong>，设置其类型 type 值为“tages”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2021-6-7 12:50:32</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>page</th>
+<th>type</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>tages</td>
+<td>tages</td>
+<td>标签</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>categories</td>
+<td>分类</td>
+</tr>
+<tr>
+<td>archives</td>
+<td>archives</td>
+<td>归档</td>
+</tr>
+<tr>
+<td>about</td>
+<td>about</td>
+<td>关于我(自我介绍)</td>
+</tr>
+</tbody></table>
+<h2 id="免费图标"><a href="#免费图标" class="headerlink" title="免费图标"></a>免费图标</h2><p><a href="https://fontawesome.com/?from=io">https://fontawesome.com/?from=io</a></p>
+<h2 id="自定义分类"><a href="#自定义分类" class="headerlink" title="自定义分类"></a>自定义分类</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">修改hexo配置：</span><br><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  categories: /categories/</span><br><span class="line">  about: /about/</span><br><span class="line">  archives: /archives/</span><br><span class="line">  tags: /tags/</span><br><span class="line">  search: /search.xml</span><br><span class="line">  pic: /pic/ || images</span><br><span class="line">新添加的菜单需要翻译对应的中文</span><br><span class="line">hexo&gt;theme&gt;next&gt;languages&gt;zh-Hans.yml</span><br><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  categories: /categories/</span><br><span class="line">  about: /about/</span><br><span class="line">  archives: /archives/</span><br><span class="line">  tags: /tags/</span><br><span class="line">  search: /search.xml</span><br><span class="line">  pic: /pic/ || images</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>线程</title>
+    <url>/2021/06/06/%E7%BA%BF%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="控制多线程的顺序"><a href="#控制多线程的顺序" class="headerlink" title="控制多线程的顺序"></a>控制多线程的顺序</h2><p>join：让主线程等待子线程结束以后才能继续运行</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span>  InterruptedException </span>&#123;</span><br><span class="line">    thread1.start();</span><br><span class="line">    thread1.join();</span><br><span class="line">    thread2.start();</span><br><span class="line">    thread2.join();</span><br><span class="line">    thread3.start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> ExecutorService executorService = newSingleThreadExecutor();</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span>  InterruptedException </span>&#123;</span><br><span class="line">    executorService.submit(thread1);</span><br><span class="line">    executorService.submit(thread2);</span><br><span class="line">    executorService.submit(thread3);</span><br><span class="line">    executorService.shutdown();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="java-中valatile和synchronized的区别"><a href="#java-中valatile和synchronized的区别" class="headerlink" title="java 中valatile和synchronized的区别"></a>java 中valatile和synchronized的区别</h2><h2 id="lock接口和synchronized的对比"><a href="#lock接口和synchronized的对比" class="headerlink" title="lock接口和synchronized的对比"></a>lock接口和synchronized的对比</h2>]]></content>
+      <tags>
+        <tag>线程</tag>
+      </tags>
+  </entry>
+</search>
