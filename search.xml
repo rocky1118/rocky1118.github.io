@@ -1,8 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>windows服务启动脚本</title>
+    <url>/2021/06/07/windows%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8/</url>
+    <content><![CDATA[<h3 id="mysql服务启动、停止"><a href="#mysql服务启动、停止" class="headerlink" title="mysql服务启动、停止"></a>mysql服务启动、停止</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">mode con lines=30 cols=60</span><br><span class="line"><span class="meta">%</span><span class="bash">1 mshta vbscript:CreateObject(<span class="string">&quot;Shell.Application&quot;</span>).ShellExecute(<span class="string">&quot;cmd.exe&quot;</span>,<span class="string">&quot;/c %~s0 ::&quot;</span>,<span class="string">&quot;&quot;</span>,<span class="string">&quot;runas&quot;</span>,1)(window.close)&amp;&amp;<span class="built_in">exit</span></span></span><br><span class="line">cd /d &quot;%~dp0&quot;</span><br><span class="line">rem 上面是以管理员身份运行，此行为注释</span><br><span class="line"></span><br><span class="line">echo 正在启动 mysql 服务</span><br><span class="line">net start MYSQL-3306</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">mode con lines=30 cols=60</span><br><span class="line"><span class="meta">%</span><span class="bash">1 mshta vbscript:CreateObject(<span class="string">&quot;Shell.Application&quot;</span>).ShellExecute(<span class="string">&quot;cmd.exe&quot;</span>,<span class="string">&quot;/c %~s0 ::&quot;</span>,<span class="string">&quot;&quot;</span>,<span class="string">&quot;runas&quot;</span>,1)(window.close)&amp;&amp;<span class="built_in">exit</span></span></span><br><span class="line">cd /d &quot;%~dp0&quot;</span><br><span class="line">rem 上面是以管理员身份运行，此行为注释</span><br><span class="line"></span><br><span class="line">echo 正在启动 mysql 服务</span><br><span class="line">net stop MYSQL-3306</span><br></pre></td></tr></table></figure>
+
+<h2 id="redis服务启动、停止"><a href="#redis服务启动、停止" class="headerlink" title="redis服务启动、停止"></a>redis服务启动、停止</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">mode con lines=30 cols=60</span><br><span class="line"><span class="meta">%</span><span class="bash">1 mshta vbscript:CreateObject(<span class="string">&quot;Shell.Application&quot;</span>).ShellExecute(<span class="string">&quot;cmd.exe&quot;</span>,<span class="string">&quot;/c %~s0 ::&quot;</span>,<span class="string">&quot;&quot;</span>,<span class="string">&quot;runas&quot;</span>,1)(window.close)&amp;&amp;<span class="built_in">exit</span></span></span><br><span class="line">cd /d &quot;%~dp0&quot;</span><br><span class="line">rem 上面是以管理员身份运行，此行为注释</span><br><span class="line"></span><br><span class="line">echo 正在启动 redis 服务</span><br><span class="line">net start redisservice</span><br><span class="line"><span class="meta">#</span><span class="bash"> --------------------------------------------------</span></span><br><span class="line">echo 正在关闭 redis 服务</span><br><span class="line">net stop redisservice</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>win服务</category>
+      </categories>
+      <tags>
+        <tag>win服务</tag>
+        <tag>bat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>各种技术框架的官方链接</title>
+    <url>/2021/06/07/%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E6%A1%86%E6%9E%B6%E7%9A%84%E5%AE%98%E6%96%B9%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[链接文字](链接网址 &quot;标题&quot;)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>搜索工具：<a href="http://www.pansou.com/">http://www.pansou.com</a></p>
+<p>二维码生成：<a href="https://cli.im/">https://cli.im/</a></p>
+<p>博客搭建：<a href="http://blog.didispace.com/blog-tools-1/">http://blog.didispace.com/blog-tools-1/</a></p>
+<blockquote>
+<p><a href="https://gitee.com/didispace/Ghost-template-dodo">https://gitee.com/didispace/Ghost-template-dodo</a></p>
+</blockquote>
+<p>在线制作作图：<a href="https://v3.processon.com/">https://v3.processon.com/</a></p>
+<p> <a href="http://repo1.maven.org/maven2/">http://repo1.maven.org/maven2/</a></p>
+<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><h2 id="springboot"><a href="#springboot" class="headerlink" title="springboot"></a>springboot</h2><p>新建项目：<a href="https://start.spring.io/">https://start.spring.io/</a></p>
+<p>banner ：<a href="http://www.patorjk.com/software/taag/#p=display&amp;f=Graffiti&amp;t=Type%20Something%20">http://www.patorjk.com/software/taag/#p=display&amp;f=Graffiti&amp;t=Type%20Something%20</a></p>
+<p>springboot文档： <a href="https://spring.io/projects/spring-boot">https://spring.io/projects/spring-boot</a></p>
+<p>springboot文档：  <a href="https://docs.spring.io/spring-boot/docs/1.4.1.RELEASE/reference/htmlsingle/#boot-features-external-config-profile-specific-properties">https://docs.spring.io/spring-boot/docs/1.4.1.RELEASE/reference/htmlsingle/#boot-features-external-config-profile-specific-properties</a></p>
+<p>yml与properties 转换：<a href="http://www.bejson.com/validators/yaml_editor/">http://www.bejson.com/validators/yaml_editor/</a></p>
+<p>thymeleaf：<a href="https://www.thymeleaf.org/">https://www.thymeleaf.org/</a></p>
+<blockquote>
+<p>springboot+mybatis+mycat读写分离 ：  <a href="https://www.cnblogs.com/cjsblog/p/9712457.html">https://www.cnblogs.com/cjsblog/p/9712457.html</a></p>
+</blockquote>
+<h2 id="mybatis"><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h2><p>mybatis官网：<a href="http://www.mybatis.org/mybatis-3/zh/index.html">http://www.mybatis.org/mybatis-3/zh/index.html</a></p>
+<p>动态sql：<a href="http://wiki.jikexueyuan.com/project/mybatis-in-action/mybatis-sql.html">http://wiki.jikexueyuan.com/project/mybatis-in-action/mybatis-sql.html</a></p>
+<h3 id="mybatis-plus"><a href="#mybatis-plus" class="headerlink" title="mybatis-plus"></a>mybatis-plus</h3><p>mybatis-plus官网配置：<a href="https://mybatis.plus/config/">https://mybatis.plus/config/</a></p>
+<p>条件构造器： <a href="https://baomidou.gitee.io/mybatis-plus-doc/#/wrapper">https://baomidou.gitee.io/mybatis-plus-doc/#/wrapper</a></p>
+<p>mybatis-plus项目：<a href="https://gitee.com/baomidou/mybatis-plus-samples">https://gitee.com/baomidou/mybatis-plus-samples</a></p>
+<h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><p>文章：<a href="https://www.cnblogs.com/suoning/p/5745263.html">https://www.cnblogs.com/suoning/p/5745263.html</a></p>
+<p>优化查询速度：<a href="https://www.cnblogs.com/phpdragon/p/8231533.html">https://www.cnblogs.com/phpdragon/p/8231533.html</a></p>
+<h2 id="mycat"><a href="#mycat" class="headerlink" title="mycat"></a>mycat</h2><p><a href="https://www.jianshu.com/p/e1182b016c28?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note&amp;utm_source=weixin-friends">https://www.jianshu.com/p/e1182b016c28?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note&amp;utm_source=weixin-friends</a></p>
+<h2 id="idea"><a href="#idea" class="headerlink" title="idea"></a>idea</h2><p>完整版在IDEA上使用GitHub进行项目开发：<a href="https://blog.csdn.net/LG_49/article/details/78127849">https://blog.csdn.net/LG_49/article/details/78127849</a></p>
+<p>Intellij IDEA 2017 debug断点调试技巧与总结详解篇：<a href="https://blog.csdn.net/qq_27093465/article/details/64124330">https://blog.csdn.net/qq_27093465/article/details/64124330</a></p>
+<p>IntelliJ IDEA 快捷键和设置：<a href="https://www.cnblogs.com/bluestorm/archive/2013/05/20/3087889.html">https://www.cnblogs.com/bluestorm/archive/2013/05/20/3087889.html</a></p>
+<p>idea下载： <a href="https://plugins.jetbrains.com/">https://plugins.jetbrains.com/</a></p>
+<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><p>java文档： <a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/toc.html">https://docs.oracle.com/javase/8/docs/technotes/tools/windows/toc.html</a></p>
+<p>汇编 ：<a href="https://www.jianshu.com/p/6a8997560b05">https://www.jianshu.com/p/6a8997560b05</a></p>
+<p>JDK参数：<a href="https://www.jianshu.com/p/6a8997560b05">https://www.jianshu.com/p/6a8997560b05</a></p>
+<p>JDK8教程：<a href="http://blog.didispace.com/books/java8-tutorial/">http://blog.didispace.com/books/java8-tutorial/</a></p>
+<p>Java虚拟机指令集：<a href="https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html#jvms-6.5.iconst_i">https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html#jvms-6.5.iconst_i</a></p>
+<p>javap -c  ：<a href="https://blog.csdn.net/lisulong1/article/details/53001211?utm_source=blogxgwz1">https://blog.csdn.net/lisulong1/article/details/53001211?utm_source=blogxgwz1</a></p>
+<p>jdk8新特性：<a href="https://blog.csdn.net/chenchaofuck1/article/details/51897481">https://blog.csdn.net/chenchaofuck1/article/details/51897481</a></p>
+<p><a href="https://docs.oracle.com/javase/8/docs/">https://docs.oracle.com/javase/8/docs/</a></p>
+<h2 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h2><p>官网：<a href="https://tomcat.apache.org/">https://tomcat.apache.org/</a></p>
+<h2 id="maven"><a href="#maven" class="headerlink" title="maven"></a>maven</h2><p>maven插件：<a href="https://maven.apache.org/plugins/">https://maven.apache.org/plugins/</a></p>
+<p>maven-plugins：<a href="http://maven.apache.org/plugins/index.html">http://maven.apache.org/plugins/index.html</a></p>
+<p><a href="http://www.mojohaus.org/plugins.html">http://www.mojohaus.org/plugins.html</a></p>
+<p><a href="https://developer.yahoo.com/weather/?guccounter=1">https://developer.yahoo.com/weather/?guccounter=1</a></p>
+<h2 id="日志配置"><a href="#日志配置" class="headerlink" title="日志配置"></a>日志配置</h2><p>Log4j：<a href="https://www.cnblogs.com/wangzhuxing/p/7753420.html">https://www.cnblogs.com/wangzhuxing/p/7753420.html</a></p>
+<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><p>官网：<a href="https://desktop.github.com/">https://desktop.github.com/</a></p>
+<h2 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h2><p>在线代码测试：<a href="http://www.dooccn.com/shell/">http://www.dooccn.com/shell/</a></p>
+<h2 id="nexus"><a href="#nexus" class="headerlink" title="nexus"></a>nexus</h2><p><a href="https://blog.csdn.net/chenchaofuck1/article/details/51897481">https://blog.csdn.net/chenchaofuck1/article/details/51897481</a></p>
+<p><a href="https://www.sonatype.com/download-oss-sonatype">https://www.sonatype.com/download-oss-sonatype</a></p>
+<p><a href="https://search.maven.org/">https://search.maven.org/</a></p>
+<h2 id="jenkins"><a href="#jenkins" class="headerlink" title="jenkins"></a>jenkins</h2><p>官网：<a href="https://jenkins.io/zh/">https://jenkins.io/zh/</a></p>
+<h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p>uniapp：<a href="https://uniapp.dcloud.io/">https://uniapp.dcloud.io/</a></p>
+<p>demo：<a href="https://www.cnblogs.com/xuanbiyijue/p/7980010.html">https://www.cnblogs.com/xuanbiyijue/p/7980010.html</a></p>
+<p>小程序专栏：<a href="http://www.see-source.com/minapp.html">http://www.see-source.com/minapp.html</a></p>
+<p>小程序官网api：<a href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/account-info/wx.getAccountInfoSync.html">https://developers.weixin.qq.com/miniprogram/dev/api/open-api/account-info/wx.getAccountInfoSync.html</a></p>
+<p>入门小程序：<a href="https://www.zhihu.com/question/50907897">https://www.zhihu.com/question/50907897</a></p>
+<h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><p>vue：<a href="https://cn.vuejs.org/v2/api/#data">https://cn.vuejs.org/v2/api/#data</a></p>
+<p>vue router：<a href="https://router.vuejs.org/zh/">https://router.vuejs.org/zh/</a></p>
+<p>layui：<a href="https://www.layui.com/demo/button.html">https://www.layui.com/demo/button.html</a></p>
+<p>搭建的一个后台管理界面：<a href="https://www.cnblogs.com/taylorchen/p/6083099.html">https://www.cnblogs.com/taylorchen/p/6083099.html</a></p>
+<p>node+vue实现一个商城Demo：&lt;<a href="https://blog.csdn.net/ssdwawa/article/details/78073315">https://blog.csdn.net/ssdwawa/article/details/78073315</a></p>
+<p>element：<a href="https://element.eleme.cn/#/zh-CN">https://element.eleme.cn/#/zh-CN</a></p>
+<p>element安装：<a href="https://element.eleme.cn/#/zh-CN/component/installation">https://element.eleme.cn/#/zh-CN/component/installation</a></p>
+<p>Flex 布局语法教程：<a href="https://www.runoob.com/w3cnote/flex-grammar.html">https://www.runoob.com/w3cnote/flex-grammar.html</a></p>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="## Linux"></a>## Linux</h2><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><p>命令：<a href="http://man.linuxde.net/">http://man.linuxde.net/</a></p>
+<p>命令：<a href="https://wangchujiang.com/linux-command/">https://wangchujiang.com/linux-command/</a></p>
+<p>命令：<a href="http://man7.org/linux/man-pages/man1/top.1.html">http://man7.org/linux/man-pages/man1/top.1.html</a></p>
+<p>Linux手册页项目：<a href="https://www.kernel.org/doc/man-pages/">https://www.kernel.org/doc/man-pages/</a></p>
+<p>VMware：<a href="https://docs.vmware.com/cn/">https://docs.vmware.com/cn/</a></p>
+<h3 id="ubuntu"><a href="#ubuntu" class="headerlink" title="ubuntu"></a>ubuntu</h3><p>官网：<a href="https://cn.ubuntu.com/">https://cn.ubuntu.com/</a></p>
+<p><a href="http://releases.ubuntu.com/">http://releases.ubuntu.com/</a></p>
+<p>10个非常有趣的Linux命令：<a href="https://www.jianshu.com/p/0353fa4942a6">https://www.jianshu.com/p/0353fa4942a6</a></p>
+<p>下载：<a href="https://www.ubuntu.com/download/desktop">https://www.ubuntu.com/download/desktop</a></p>
+<h3 id="centos"><a href="#centos" class="headerlink" title="centos"></a>centos</h3><p>centos基本配置：<a href="https://blog.csdn.net/ever_peng/article/details/80118871">https://blog.csdn.net/ever_peng/article/details/80118871</a></p>
+<p>安装docker：<a href="https://www.cnblogs.com/yufeng218/p/8370670.html">https://www.cnblogs.com/yufeng218/p/8370670.html</a></p>
+<p>安装docker：<a href="https://www.cnblogs.com/ityouknow/p/8903975.html">https://www.cnblogs.com/ityouknow/p/8903975.html</a></p>
+<p><a href="http://mirrors.163.com/centos/7/os/x86_64/Packages/">http://mirrors.163.com/centos/7/os/x86_64/Packages/</a></p>
+<h2 id="go"><a href="#go" class="headerlink" title="go"></a>go</h2><p>go语言入门：<a href="https://www.cnblogs.com/java-zhao/p/9942311.html">https://www.cnblogs.com/java-zhao/p/9942311.html</a></p>
+<p>黑马程序员：<a href="http://bbs.itheima.com/thread-403416-1-1.html">http://bbs.itheima.com/thread-403416-1-1.html</a></p>
+<h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><p>Python环境搭建：<a href="https://www.runoob.com/python/python-install.html">https://www.runoob.com/python/python-install.html</a></p>
+<p>Python 教程：<a href="http://codingdict.com/article/6322">http://codingdict.com/article/6322</a></p>
+<p>Python docs：<a href="https://docs.python.org/3.7/index.html">https://docs.python.org/3.7/index.html</a></p>
+<h2 id="anaconda"><a href="#anaconda" class="headerlink" title="anaconda"></a>anaconda</h2><p>anaconda：<a href="https://www.anaconda.com/download/#download">https://www.anaconda.com/download/#download</a></p>
+<p>Anaconda的安装与优化配置：<a href="https://blog.csdn.net/qq_38188725/article/details/80624004">https://blog.csdn.net/qq_38188725/article/details/80624004</a></p>
+<h2 id="jfinal"><a href="#jfinal" class="headerlink" title="jfinal"></a>jfinal</h2><p>文档：<a href="http://www.jfinal.com/doc/3-3">http://www.jfinal.com/doc/3-3</a></p>
+<p>项目：<a href="https://gitee.com/jfinal/jfinal-weixin/wikis/Home">https://gitee.com/jfinal/jfinal-weixin/wikis/Home</a></p>
+<h2 id="黑马程序员"><a href="#黑马程序员" class="headerlink" title="黑马程序员"></a>黑马程序员</h2><p><a href="http://bbs.itheima.com/forum.php">http://bbs.itheima.com/forum.php</a></p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>图虫：<a href="https://tuchong.com/992964/">https://tuchong.com/992964/</a></p>
+<p><a href="https://web.500px.com/">https://web.500px.com/</a></p>
+<p>表情：<a href="http://cn.piliapp.com/emoji/cheat-sheet/">http://cn.piliapp.com/emoji/cheat-sheet/</a></p>
+<p>win7系统原版：<a href="http://www.windows7en.com/Win7Down/6549.html">http://www.windows7en.com/Win7Down/6549.html</a></p>
+<p>bios设置u盘启动为第一启动怎么做教程：<a href="http://www.upantool.com/jiaocheng/boot/11969.html">http://www.upantool.com/jiaocheng/boot/11969.html</a></p>
+<p>msdn我告诉你：<a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a></p>
+<p>软件下载：<a href="https://mp.weixin.qq.com/s/q4XJ86YYQEi9d2BwFDGWpQ">https://mp.weixin.qq.com/s/q4XJ86YYQEi9d2BwFDGWpQ</a></p>
+<p>STS(Spring Tool Suite)软件使用前准备：<a href="https://blog.csdn.net/wuyt2008/article/details/17586015">https://blog.csdn.net/wuyt2008/article/details/17586015</a></p>
+<p>win10虚拟机安装苹果：<a href="https://www.jianshu.com/p/2d1f671ceedc?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note&amp;utm_source=weixin-friends">https://www.jianshu.com/p/2d1f671ceedc?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note&amp;utm_source=weixin-friends</a></p>
+<p>aixcoder智能编程助手：<a href="https://www.aixcoder.com/#/">https://www.aixcoder.com/#/</a></p>
+<p>office教程学习网：<a href="http://www.office68.com/">http://www.office68.com/</a></p>
+<p>点线软件：<a href="http://183.2.137.30/front/login.jsp;jsessionid=3648BF71EE535EFE2D873A974A9F7057">http://183.2.137.30/front/login.jsp;jsessionid=3648BF71EE535EFE2D873A974A9F7057</a></p>
+<p>游戏 SmartFoxServer</p>
+<h2 id="看剧"><a href="#看剧" class="headerlink" title="看剧"></a>看剧</h2><p>碟调：<a href="https://www.diediaow.com/">https://www.diediaow.com/</a></p>
+<p>小调：<a href="https://www.xiaopian.com/">https://www.xiaopian.com/</a></p>
+<p><a href="http://esyy007.com/">http://esyy007.com/</a></p>
+<h2 id="优惠券"><a href="#优惠券" class="headerlink" title="优惠券"></a>优惠券</h2><p>优惠券：<a href="http://www.bntyh.com/">http://www.bntyh.com/</a></p>
+<p>优惠券：<a href="http://0b9c143fd429e977.m.mlj55.com/supersearch/index/agent_pname/122558899-37560761-136408964">http://0b9c143fd429e977.m.mlj55.com/supersearch/index/agent_pname/122558899-37560761-136408964</a></p>
+<p>优惠券：<a href="http://www.9191m.com/">http://www.9191m.com/</a></p>
+<p>搜款网：<a href="https://www.vvic.com/gz/new.html">https://www.vvic.com/gz/new.html</a></p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>单反配置：<a href="http://cn.piliapp.com/emoji/cheat-sheet/">http://cn.piliapp.com/emoji/cheat-sheet/</a></p>
+<p>poco：<a href="http://www.poco.cn/">http://www.poco.cn</a></p>
+<p>小醒ISO：<a href="http://soberiso.lofter.com/post/124fe7_6c943c6">http://soberiso.lofter.com/post/124fe7_6c943c6</a></p>
+<p>ps抠头发：<a href="https://jingyan.baidu.com/article/647f0115a8e6f07f2148a831.html">https://jingyan.baidu.com/article/647f0115a8e6f07f2148a831.html</a></p>
+<h2 id="谷歌插件"><a href="#谷歌插件" class="headerlink" title="谷歌插件"></a>谷歌插件</h2><p><a href="http://chromecj.com/">http://chromecj.com/</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/32238931">https://zhuanlan.zhihu.com/p/32238931</a></p>
+<p><a href="http://www.cnplugins.com/zhuanti/it-developer-plugins.html">http://www.cnplugins.com/zhuanti/it-developer-plugins.html</a></p>
+<p>公众号：</p>
+<ul>
+<li><p>纯洁的微笑</p>
+<ul>
+<li><a href="http://www.ityouknow.com/spring-boot">http://www.ityouknow.com/spring-boot</a></li>
+<li><a href="https://www.cnblogs.com/ityouknow/">https://www.cnblogs.com/ityouknow/</a></li>
+</ul>
+</li>
+<li><p>程序员DD </p>
+<ul>
+<li>简书：<a href="https://www.jianshu.com/u/6a622d516e32">https://www.jianshu.com/u/6a622d516e32</a></li>
+<li>博客园：<a href="https://www.cnblogs.com/didispace/">https://www.cnblogs.com/didispace/</a></li>
+</ul>
+</li>
+<li><p>java团长 </p>
+<ul>
+<li><a href="https://www.cnblogs.com/java1024/default.html?page=1">https://www.cnblogs.com/java1024/default.html?page=1</a> </li>
+<li> <a href="https://www.jianshu.com/u/f376cb22c89e">https://www.jianshu.com/u/f376cb22c89e</a></li>
+</ul>
+</li>
+<li><p>hollis  :<a href="http://www.hollischuang.com/">http://www.hollischuang.com/</a></p>
+</li>
+<li><p>小马哥</p>
+<ul>
+<li>github：<a href="https://github.com/mercyblitz">https://github.com/mercyblitz</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>groovy逆向工程生成自定义实体类</title>
+    <url>/2021/06/07/groovy/groovy%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E7%94%9F%E6%88%90%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BD%93%E7%B1%BB/</url>
+    <content><![CDATA[<h2 id="生成步骤"><a href="#生成步骤" class="headerlink" title="生成步骤"></a>生成步骤</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">用Idea连接数据库</span><br><span class="line">选中单个表，右键选则Scripted EExtensions 选择XXX.groovy文件</span><br><span class="line">选择生成的路径。OK</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="自定义groovy文件"><a href="#自定义groovy文件" class="headerlink" title="自定义groovy文件"></a>自定义groovy文件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">用Idea连接数据库</span><br><span class="line">选中单个表，右键选则Scripted EExtensions 选择Go to Scripts Directory</span><br><span class="line">根据弹出来的，选择任意一个*.groovy文件右键 Open in 选择 Explorer</span><br><span class="line"># 本人的目录</span><br><span class="line">C:\Users\XXX\AppData\Roaming\JetBrains\IntelliJIdea2020.3\extensions\com.intellij.database\schema</span><br><span class="line">可以自己创建XX.groovy文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试SQL"><a href="#测试SQL" class="headerlink" title="测试SQL"></a>测试SQL</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `user_setmeal` (</span><br><span class="line">  `id` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;用户申请购买套餐&#x27;</span>,</span><br><span class="line">  `userId` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;用户ID&#x27;</span>,</span><br><span class="line">  `realName` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;真实姓名&#x27;</span>,</span><br><span class="line">  `licenseNumber` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;车牌号码&#x27;</span>,</span><br><span class="line">  `ID_Card_No` <span class="type">varchar</span>(<span class="number">18</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;身份证号码&#x27;</span>,</span><br><span class="line">  `models` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;车型&#x27;</span>,</span><br><span class="line">  `Enginemodel` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;发动机型号&#x27;</span>,</span><br><span class="line">  `phoneNumber` <span class="type">varchar</span>(<span class="number">11</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;手机号码&#x27;</span>,</span><br><span class="line">  `yqmcode` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;邀请码&#x27;</span>,</span><br><span class="line">  `distribution` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;分销姓名&#x27;</span>,</span><br><span class="line">  `bankName` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;银行户名&#x27;</span>,</span><br><span class="line">  `bankmunber` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;银行账号&#x27;</span>,</span><br><span class="line">  `openingbank` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;开户行&#x27;</span>,</span><br><span class="line">  `status` <span class="type">int</span>(<span class="number">11</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;通过状态0未审核，1购买成功，2不通过,3不能重复提交,4已使用&#x27;</span>,</span><br><span class="line">  `totalprice` <span class="keyword">double</span> <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;总价格&#x27;</span>,</span><br><span class="line">  `Create_Time` datetime <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;申请时间&#x27;</span>,</span><br><span class="line">  `Update_Time` datetime <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;修改时间&#x27;</span>,</span><br><span class="line">  `Enable` bit(<span class="number">1</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;是否可用&#x27;</span>,</span><br><span class="line">  `Remark` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;备注&#x27;</span>,</span><br><span class="line">  <span class="keyword">PRIMARY</span> KEY (`id`)</span><br><span class="line">) ENGINE<span class="operator">=</span>InnoDB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8;</span><br></pre></td></tr></table></figure>
+
+<h2 id="实体类生成Demo"><a href="#实体类生成Demo" class="headerlink" title="实体类生成Demo"></a>实体类生成Demo</h2><h3 id="生成的实体类"><a href="#生成的实体类" class="headerlink" title="生成的实体类"></a>生成的实体类</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> </span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> lombok.EqualsAndHashCode;</span><br><span class="line"><span class="keyword">import</span> lombok.experimental.Accessors;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.*;</span><br><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"><span class="keyword">import</span> java.math.BigDecimal;</span><br><span class="line"><span class="keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> rocky</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@since</span> 2021-06-07</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@EqualsAndHashCode(callSuper = false)</span></span><br><span class="line"><span class="meta">@Accessors(chain = true)</span></span><br><span class="line"><span class="meta">@TableName(&quot;user_setmeal&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserSetmeal</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">3323870674689905049L</span>;</span><br><span class="line">	<span class="comment">/** 用户申请购买套餐 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String ID = <span class="string">&quot;id&quot;</span>;</span><br><span class="line">	<span class="comment">/** 用户ID */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String USERID = <span class="string">&quot;userId&quot;</span>;</span><br><span class="line">	<span class="comment">/** 真实姓名 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String REALNAME = <span class="string">&quot;realName&quot;</span>;</span><br><span class="line">	<span class="comment">/** 车牌号码 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String LICENSENUMBER = <span class="string">&quot;licenseNumber&quot;</span>;</span><br><span class="line">	<span class="comment">/** 身份证号码 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String ID_CARD_NO = <span class="string">&quot;ID_Card_No&quot;</span>;</span><br><span class="line">	<span class="comment">/** 车型 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String MODELS = <span class="string">&quot;models&quot;</span>;</span><br><span class="line">	<span class="comment">/** 发动机型号 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String ENGINEMODEL = <span class="string">&quot;Enginemodel&quot;</span>;</span><br><span class="line">	<span class="comment">/** 手机号码 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String PHONENUMBER = <span class="string">&quot;phoneNumber&quot;</span>;</span><br><span class="line">	<span class="comment">/** 邀请码 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String YQMCODE = <span class="string">&quot;yqmcode&quot;</span>;</span><br><span class="line">	<span class="comment">/** 分销姓名 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String DISTRIBUTION = <span class="string">&quot;distribution&quot;</span>;</span><br><span class="line">	<span class="comment">/** 银行户名 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String BANKNAME = <span class="string">&quot;bankName&quot;</span>;</span><br><span class="line">	<span class="comment">/** 银行账号 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String BANKMUNBER = <span class="string">&quot;bankmunber&quot;</span>;</span><br><span class="line">	<span class="comment">/** 开户行 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String OPENINGBANK = <span class="string">&quot;openingbank&quot;</span>;</span><br><span class="line">	<span class="comment">/** 通过状态0未审核，1购买成功，2不通过,3不能重复提交,4已使用 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String STATUS = <span class="string">&quot;status&quot;</span>;</span><br><span class="line">	<span class="comment">/** 总价格 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String TOTALPRICE = <span class="string">&quot;totalprice&quot;</span>;</span><br><span class="line">	<span class="comment">/** 申请时间 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String CREATE_TIME = <span class="string">&quot;Create_Time&quot;</span>;</span><br><span class="line">	<span class="comment">/** 修改时间 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String UPDATE_TIME = <span class="string">&quot;Update_Time&quot;</span>;</span><br><span class="line">	<span class="comment">/** 是否可用 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String ENABLE = <span class="string">&quot;Enable&quot;</span>;</span><br><span class="line">	<span class="comment">/** 备注 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String REMARK = <span class="string">&quot;Remark&quot;</span>;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 用户申请购买套餐</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@TableId(type = IdType.AUTO)</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;id&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String id;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 用户ID</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;userId&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String userId;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 真实姓名</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;realName&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String realName;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 车牌号码</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;licenseNumber&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String licenseNumber;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 身份证号码</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;ID_Card_No&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String idCardNo;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 车型</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;models&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String models;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 发动机型号</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;Enginemodel&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String enginemodel;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 手机号码</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;phoneNumber&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String phoneNumber;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 邀请码</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;yqmcode&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String yqmcode;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 分销姓名</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;distribution&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String distribution;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 银行户名</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;bankName&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String bankName;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 银行账号</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;bankmunber&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String bankmunber;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 开户行</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;openingbank&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String openingbank;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 通过状态0未审核，1购买成功，2不通过,3不能重复提交,4已使用</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;status&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> Integer status;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 总价格</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;totalprice&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> BigDecimal totalprice;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 申请时间</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;Create_Time&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> LocalDateTime createTime;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 修改时间</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;Update_Time&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> LocalDateTime updateTime;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 是否可用</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;Enable&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> Boolean enable;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 备注</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"> 	<span class="meta">@TableField(&quot;Remark&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String remark;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="pojo-proovy文件"><a href="#pojo-proovy文件" class="headerlink" title="pojo.proovy文件"></a>pojo.proovy文件</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.intellij.database.model.DasTable</span><br><span class="line"><span class="keyword">import</span> com.intellij.database.util.Case</span><br><span class="line"><span class="keyword">import</span> com.intellij.database.util.DasUtil</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.time.LocalDate</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Available context bindings:</span></span><br><span class="line"><span class="comment"> * SELECTION Iterable&lt;DasObject&gt;</span></span><br><span class="line"><span class="comment"> * PROJECT  project</span></span><br><span class="line"><span class="comment"> * FILES  files helper</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 此处指定包路径，路径需要自行维护;</span></span><br><span class="line">packageName = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 此处指定对应的类型映射，可按需修改，目前tinyint如果要映射到自定义枚举类型，只能手动修改</span></span><br><span class="line">typeMapping = [</span><br><span class="line">        (<span class="regexp">~/(?i)bigint/</span>)                         : <span class="string">&quot;Long&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)smallint|mediumint|tinyint|int/</span>) : <span class="string">&quot;Integer&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)bool|bit/</span>)                       : <span class="string">&quot;Boolean&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)float|double|decimal|real/</span>)      : <span class="string">&quot;BigDecimal&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)time|datetime|timestamp/</span>)        : <span class="string">&quot;LocalDateTime&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)date/</span>)                           : <span class="string">&quot;LocalDate&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)blob|mediumblob|binary|bfile|clob|raw|image/</span>): <span class="string">&quot;Byte[]&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)text|mediumtext/</span>)                : <span class="string">&quot;String&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)/</span>)                               : <span class="string">&quot;String&quot;</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 上面用到类和它的导入路径的之间的映射</span></span><br><span class="line">importMap = [</span><br><span class="line">        <span class="string">&quot;BigDecimal&quot;</span> : <span class="string">&quot;java.math.BigDecimal&quot;</span>,</span><br><span class="line">        <span class="string">&quot;LocalDate&quot;</span> : <span class="string">&quot;java.time.LocalDate&quot;</span>,</span><br><span class="line">        <span class="string">&quot;LocalDateTime&quot;</span>: <span class="string">&quot;java.time.LocalDateTime&quot;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入路径列表，下面引用的时候会去重，也可以直接声明成一个 HashSet</span></span><br><span class="line">importList = []</span><br><span class="line"></span><br><span class="line"><span class="comment">// 弹出选择文件的对话框</span></span><br><span class="line">FILES.chooseDirectoryAndSave(<span class="string">&quot;Choose directory&quot;</span>, <span class="string">&quot;Choose where to store generated files&quot;</span>) &#123; dir -&gt;</span><br><span class="line">    SELECTION.filter &#123; it <span class="keyword">instanceof</span> DasTable &#125;.each &#123; generate(it, dir) &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> generate(table, dir) &#123;</span><br><span class="line">    <span class="comment">//def className = javaName(table.getName(), true) + &quot;Entity&quot;</span></span><br><span class="line">    <span class="keyword">def</span> className = javaName(table.getName(), <span class="literal">true</span>)</span><br><span class="line">    <span class="keyword">def</span> fields = calcFields(table)</span><br><span class="line">    <span class="keyword">new</span> PrintWriter(<span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(<span class="keyword">new</span> File(dir, className + <span class="string">&quot;.java&quot;</span>)), <span class="string">&quot;utf-8&quot;</span>)).withPrintWriter &#123; out -&gt; generate(out, className ,fields, table) &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从这里开始，拼实体类的具体逻辑代码</span></span><br><span class="line"><span class="keyword">def</span> generate(out, className, fields, table) &#123;</span><br><span class="line">    out.println <span class="string">&quot;package $packageName&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="comment">// 引入所需的包</span></span><br><span class="line">    out.println <span class="string">&quot;import lombok.Data;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;import lombok.EqualsAndHashCode;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;import lombok.experimental.Accessors;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;import com.baomidou.mybatisplus.annotation.*;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;import java.io.Serializable;&quot;</span></span><br><span class="line">    <span class="comment">// 去重后导入列表</span></span><br><span class="line">    importList.unique().each() &#123; pkg -&gt;</span><br><span class="line">        out.println <span class="string">&quot;import &quot;</span> + pkg + <span class="string">&quot;;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="comment">// 添加类注释</span></span><br><span class="line">    out.println <span class="string">&quot;/**&quot;</span></span><br><span class="line">    <span class="comment">// 如果添加了表注释，会加到类注释上</span></span><br><span class="line">    <span class="keyword">if</span> (isNotEmpty(table.getComment())) &#123;</span><br><span class="line">        out.println <span class="string">&quot; * &quot;</span> + table.getComment()</span><br><span class="line">    &#125;</span><br><span class="line">    out.println <span class="string">&quot; *&quot;</span></span><br><span class="line">    out.println <span class="string">&quot; * @author rocky&quot;</span></span><br><span class="line">    out.println <span class="string">&quot; * @since &quot;</span> + LocalDate.now()</span><br><span class="line">    out.println <span class="string">&quot; */&quot;</span></span><br><span class="line">    <span class="comment">// 添加类注解</span></span><br><span class="line">    out.println <span class="string">&quot;@Data&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;@EqualsAndHashCode(callSuper = false)&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;@Accessors(chain = true)&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;@TableName(\&quot;$&#123;table.getName()&#125;\&quot;)&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;public class $className implements Serializable &#123;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    out.println genSerialID()</span><br><span class="line">    <span class="keyword">boolean</span> isId = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历字段，按下面的规则生成</span></span><br><span class="line">    fields.each() &#123;</span><br><span class="line">        <span class="comment">// 输出注释</span></span><br><span class="line">        <span class="keyword">if</span> (isNotEmpty(it.comment)) &#123;</span><br><span class="line">            out.println <span class="string">&quot;\t/** $&#123;it.comment&#125; */&quot;</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        out.println <span class="string">&quot;\tpublic static String $&#123;it.tbName.toUpperCase()&#125; = \&quot;$&#123;it.tbName&#125;\&quot;;&quot;</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历字段，按下面的规则生成</span></span><br><span class="line">    fields.each() &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//        out.println &quot;\tpublic static $&#123;it.type&#125; $&#123;it.tbName.toUpperCase()&#125; = \&quot;$&#123;it.tbName&#125; \&quot;;&quot;</span></span><br><span class="line">        <span class="comment">// 输出注释</span></span><br><span class="line">        <span class="keyword">if</span> (isNotEmpty(it.comment)) &#123;</span><br><span class="line">            out.println <span class="string">&quot;\t/**&quot;</span></span><br><span class="line">            out.println <span class="string">&quot;\t * $&#123;it.comment&#125;&quot;</span></span><br><span class="line">            out.println <span class="string">&quot;\t */&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 这边默认第一个字段为主键，实际情况大多数如此，遇到特殊情况可能需要手动修改</span></span><br><span class="line">        <span class="keyword">if</span> (isId) &#123;</span><br><span class="line">            out.println <span class="string">&quot;\t@TableId(type = IdType.AUTO)&quot;</span></span><br><span class="line">            isId = <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> ((it.annos + <span class="string">&quot;&quot;</span>).indexOf(<span class="string">&quot;[@Id]&quot;</span>) &gt;= <span class="number">0</span>) out.println <span class="string">&quot;\t@Id&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (it.annos != <span class="string">&quot;&quot;</span>) out.println <span class="string">&quot; $&#123;it.annos.replace(&quot;</span>[<span class="meta">@Id</span>]<span class="string">&quot;, &quot;</span><span class="string">&quot;)&#125;&quot;</span></span><br><span class="line"></span><br><span class="line">        out.println <span class="string">&quot;\tprivate $&#123;it.type&#125; $&#123;it.name&#125;;&quot;</span></span><br><span class="line">        out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&#125;&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> calcFields(table) &#123;</span><br><span class="line">    DasUtil.getColumns(table).reduce([]) &#123; fields, col -&gt;</span><br><span class="line">        <span class="keyword">def</span> spec = Case.LOWER.apply(col.getDataType().getSpecification())</span><br><span class="line">        <span class="keyword">def</span> typeStr = typeMapping.find &#123; p, t -&gt; p.matcher(spec).find() &#125;.value</span><br><span class="line">        <span class="keyword">if</span> (importMap.containsKey(typeStr)) &#123;</span><br><span class="line">            importList.add(importMap.get(typeStr))</span><br><span class="line">        &#125;</span><br><span class="line">        fields += [[</span><br><span class="line">                           <span class="attr">name :</span> javaName(col.getName(), <span class="literal">false</span>),</span><br><span class="line">                           <span class="attr">type :</span> typeStr,</span><br><span class="line">                           <span class="symbol">comment:</span> col.getComment(),</span><br><span class="line">                           <span class="symbol">tbName:</span>  col.getName() ,</span><br><span class="line">                           <span class="attr">annos :</span> <span class="string">&quot;\t@TableField(\&quot;&quot;</span> + col.getName() + <span class="string">&quot;\&quot;)&quot;</span>,</span><br><span class="line">                   ]]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> isNotEmpty(content) &#123;</span><br><span class="line">    <span class="keyword">return</span> content != <span class="literal">null</span> &amp;&amp; content.toString().trim().length() &gt; <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> javaName(str, capitalize) &#123;</span><br><span class="line">    <span class="keyword">def</span> s = com.intellij.psi.codeStyle.NameUtil.splitNameIntoWords(str)</span><br><span class="line">            .collect &#123; Case.LOWER.apply(it).capitalize() &#125;</span><br><span class="line">            .join(<span class="string">&quot;&quot;</span>)</span><br><span class="line">            .replaceAll(<span class="regexp">/[^\p&#123;javaJavaIdentifierPart&#125;[_]]/</span>, <span class="string">&quot;_&quot;</span>)</span><br><span class="line">    capitalize || s.length() == <span class="number">1</span> ? s : Case.LOWER.apply(s[<span class="number">0</span>]) + s[<span class="number">1.</span>.<span class="number">-1</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> String genSerialID() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;\tprivate static final long serialVersionUID = &quot;</span> + Math.abs(<span class="keyword">new</span> Random().nextLong()) + <span class="string">&quot;L;&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Dto接口生成Demo"><a href="#Dto接口生成Demo" class="headerlink" title="Dto接口生成Demo"></a>Dto接口生成Demo</h2><h3 id="生成的实体类-1"><a href="#生成的实体类-1" class="headerlink" title="生成的实体类"></a>生成的实体类</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> io.swagger.annotations.ApiModelProperty;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> java.math.BigDecimal;</span><br><span class="line"><span class="keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> rocky</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@since</span> 2021-06-07</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserSetmeal</span>  </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;用户申请购买套餐&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String id;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;用户ID&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String userId;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;真实姓名&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String realName;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;车牌号码&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String licenseNumber;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;身份证号码&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String idCardNo;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;车型&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String models;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;发动机型号&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String enginemodel;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;手机号码&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String phoneNumber;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;邀请码&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String yqmcode;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;分销姓名&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String distribution;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;银行户名&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String bankName;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;银行账号&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String bankmunber;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;开户行&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String openingbank;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;通过状态0未审核，1购买成功，2不通过,3不能重复提交,4已使用&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> Integer status;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;总价格&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> BigDecimal totalprice;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;申请时间&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> LocalDateTime createTime;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;修改时间&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> LocalDateTime updateTime;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;是否可用&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> Boolean enable;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;备注&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String remark;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="Api-Dto-groovy-文件"><a href="#Api-Dto-groovy-文件" class="headerlink" title="Api-Dto.groovy 文件"></a>Api-Dto.groovy 文件</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.intellij.database.model.DasTable</span><br><span class="line"><span class="keyword">import</span> com.intellij.database.util.Case</span><br><span class="line"><span class="keyword">import</span> com.intellij.database.util.DasUtil</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.time.LocalDate</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Available context bindings:</span></span><br><span class="line"><span class="comment"> * SELECTION Iterable&lt;DasObject&gt;</span></span><br><span class="line"><span class="comment"> * PROJECT  project</span></span><br><span class="line"><span class="comment"> * FILES  files helper</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 此处指定包路径，路径需要自行维护;</span></span><br><span class="line">packageName = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 此处指定对应的类型映射，可按需修改，目前tinyint如果要映射到自定义枚举类型，只能手动修改</span></span><br><span class="line">typeMapping = [</span><br><span class="line">        (<span class="regexp">~/(?i)bigint/</span>)                         : <span class="string">&quot;Long&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)smallint|mediumint|tinyint|int/</span>) : <span class="string">&quot;Integer&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)bool|bit/</span>)                       : <span class="string">&quot;Boolean&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)float|double|decimal|real/</span>)      : <span class="string">&quot;BigDecimal&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)time|datetime|timestamp/</span>)        : <span class="string">&quot;LocalDateTime&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)date/</span>)                           : <span class="string">&quot;LocalDate&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)blob|mediumblob|binary|bfile|clob|raw|image/</span>): <span class="string">&quot;Byte[]&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)text|mediumtext/</span>)                : <span class="string">&quot;String&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)/</span>)                               : <span class="string">&quot;String&quot;</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 上面用到类和它的导入路径的之间的映射</span></span><br><span class="line">importMap = [</span><br><span class="line">        <span class="string">&quot;BigDecimal&quot;</span> : <span class="string">&quot;java.math.BigDecimal&quot;</span>,</span><br><span class="line">        <span class="string">&quot;LocalDate&quot;</span> : <span class="string">&quot;java.time.LocalDate&quot;</span>,</span><br><span class="line">        <span class="string">&quot;LocalDateTime&quot;</span>: <span class="string">&quot;java.time.LocalDateTime&quot;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入路径列表，下面引用的时候会去重，也可以直接声明成一个 HashSet</span></span><br><span class="line">importList = []</span><br><span class="line"></span><br><span class="line"><span class="comment">// 弹出选择文件的对话框</span></span><br><span class="line">FILES.chooseDirectoryAndSave(<span class="string">&quot;Choose directory&quot;</span>, <span class="string">&quot;Choose where to store generated files&quot;</span>) &#123; dir -&gt;</span><br><span class="line">    SELECTION.filter &#123; it <span class="keyword">instanceof</span> DasTable &#125;.each &#123; generate(it, dir) &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> generate(table, dir) &#123;</span><br><span class="line">    <span class="comment">//def className = javaName(table.getName(), true) + &quot;Entity&quot;</span></span><br><span class="line">    <span class="keyword">def</span> className = javaName(table.getName(), <span class="literal">true</span>)</span><br><span class="line">    <span class="keyword">def</span> fields = calcFields(table)</span><br><span class="line">    <span class="keyword">new</span> PrintWriter(<span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(<span class="keyword">new</span> File(dir, className + <span class="string">&quot;.java&quot;</span>)), <span class="string">&quot;utf-8&quot;</span>)).withPrintWriter &#123; out -&gt; generate(out, className ,fields, table) &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从这里开始，拼实体类的具体逻辑代码</span></span><br><span class="line"><span class="keyword">def</span> generate(out, className, fields, table) &#123;</span><br><span class="line"><span class="comment">//    out.println &quot;package $packageName&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="comment">// 引入所需的包</span></span><br><span class="line">    out.println <span class="string">&quot;import io.swagger.annotations.ApiModelProperty;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;import lombok.Data;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 去重后导入列表</span></span><br><span class="line">    importList.unique().each() &#123; pkg -&gt;</span><br><span class="line">        out.println <span class="string">&quot;import &quot;</span> + pkg + <span class="string">&quot;;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="comment">// 添加类注释</span></span><br><span class="line">    out.println <span class="string">&quot;/**&quot;</span></span><br><span class="line">    <span class="comment">// 如果添加了表注释，会加到类注释上</span></span><br><span class="line">    <span class="keyword">if</span> (isNotEmpty(table.getComment())) &#123;</span><br><span class="line">        out.println <span class="string">&quot; * &quot;</span> + table.getComment()</span><br><span class="line">    &#125;</span><br><span class="line">    out.println <span class="string">&quot; *&quot;</span></span><br><span class="line">    out.println <span class="string">&quot; * @author rocky&quot;</span></span><br><span class="line">    out.println <span class="string">&quot; * @since &quot;</span> + LocalDate.now()</span><br><span class="line">    out.println <span class="string">&quot; */&quot;</span></span><br><span class="line">    <span class="comment">// 添加类注解</span></span><br><span class="line">    out.println <span class="string">&quot;@Data&quot;</span></span><br><span class="line"><span class="comment">//    out.println &quot;@EqualsAndHashCode(callSuper = false)&quot;</span></span><br><span class="line"><span class="comment">//    out.println &quot;@Accessors(chain = true)&quot;</span></span><br><span class="line"><span class="comment">//    out.println &quot;@TableName(\&quot;$&#123;table.getName()&#125;\&quot;)&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;public class $className  &#123;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="comment">//    out.println genSerialID()</span></span><br><span class="line">    <span class="keyword">boolean</span> isId = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历字段，按下面的规则生成</span></span><br><span class="line"><span class="comment">//    fields.each() &#123;</span></span><br><span class="line"><span class="comment">//        // 输出注释</span></span><br><span class="line"><span class="comment">//        if (isNotEmpty(it.comment)) &#123;</span></span><br><span class="line"><span class="comment">//            out.println &quot;\t/** $&#123;it.comment&#125; */&quot;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//        out.println &quot;\tpublic static String $&#123;it.tbName.toUpperCase()&#125; = \&quot;$&#123;it.tbName&#125;\&quot;;&quot;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历字段，按下面的规则生成</span></span><br><span class="line">    fields.each() &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//        out.println &quot;\tpublic static $&#123;it.type&#125; $&#123;it.tbName.toUpperCase()&#125; = \&quot;$&#123;it.tbName&#125; \&quot;;&quot;</span></span><br><span class="line">        <span class="comment">// 输出注释</span></span><br><span class="line"><span class="comment">//        if (isNotEmpty(it.comment)) &#123;</span></span><br><span class="line"><span class="comment">//            out.println &quot;\t/**&quot;</span></span><br><span class="line"><span class="comment">//            out.println &quot;\t * $&#123;it.comment&#125;&quot;</span></span><br><span class="line"><span class="comment">//            out.println &quot;\t */&quot;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line">        <span class="comment">// 这边默认第一个字段为主键，实际情况大多数如此，遇到特殊情况可能需要手动修改</span></span><br><span class="line"><span class="comment">//        if (isId) &#123;</span></span><br><span class="line"><span class="comment">//            out.println &quot;\t@TableId(type = IdType.AUTO)&quot;</span></span><br><span class="line"><span class="comment">//            isId = false</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//        if ((it.annos + &quot;&quot;).indexOf(&quot;[@Id]&quot;) &gt;= 0) out.println &quot;\t@Id&quot;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//        if (it.annos != &quot;&quot;) out.println &quot; $&#123;it.annos.replace(&quot;[@Id]&quot;, &quot;&quot;)&#125;&quot;</span></span><br><span class="line"></span><br><span class="line">        out.println <span class="string">&quot;\t@ApiModelProperty(\&quot;$&#123;it.comment&#125;\&quot;)&quot;</span></span><br><span class="line">        out.println <span class="string">&quot;\tprivate $&#123;it.type&#125; $&#123;it.name&#125;;&quot;</span></span><br><span class="line">        out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&#125;&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> calcFields(table) &#123;</span><br><span class="line">    DasUtil.getColumns(table).reduce([]) &#123; fields, col -&gt;</span><br><span class="line">        <span class="keyword">def</span> spec = Case.LOWER.apply(col.getDataType().getSpecification())</span><br><span class="line">        <span class="keyword">def</span> typeStr = typeMapping.find &#123; p, t -&gt; p.matcher(spec).find() &#125;.value</span><br><span class="line">        <span class="keyword">if</span> (importMap.containsKey(typeStr)) &#123;</span><br><span class="line">            importList.add(importMap.get(typeStr))</span><br><span class="line">        &#125;</span><br><span class="line">        fields += [[</span><br><span class="line">                           <span class="attr">name :</span> javaName(col.getName(), <span class="literal">false</span>),</span><br><span class="line">                           <span class="attr">type :</span> typeStr,</span><br><span class="line">                           <span class="symbol">comment:</span> col.getComment(),</span><br><span class="line">                           <span class="symbol">tbName:</span>  col.getName() ,</span><br><span class="line">                           <span class="attr">annos :</span> <span class="string">&quot;\t@TableField(\&quot;&quot;</span> + col.getName() + <span class="string">&quot;\&quot;)&quot;</span>,</span><br><span class="line">                   ]]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> isNotEmpty(content) &#123;</span><br><span class="line">    <span class="keyword">return</span> content != <span class="literal">null</span> &amp;&amp; content.toString().trim().length() &gt; <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> javaName(str, capitalize) &#123;</span><br><span class="line">    <span class="keyword">def</span> s = com.intellij.psi.codeStyle.NameUtil.splitNameIntoWords(str)</span><br><span class="line">            .collect &#123; Case.LOWER.apply(it).capitalize() &#125;</span><br><span class="line">            .join(<span class="string">&quot;&quot;</span>)</span><br><span class="line">            .replaceAll(<span class="regexp">/[^\p&#123;javaJavaIdentifierPart&#125;[_]]/</span>, <span class="string">&quot;_&quot;</span>)</span><br><span class="line">    capitalize || s.length() == <span class="number">1</span> ? s : Case.LOWER.apply(s[<span class="number">0</span>]) + s[<span class="number">1.</span>.<span class="number">-1</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> String genSerialID() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;\tprivate static final long serialVersionUID = &quot;</span> + Math.abs(<span class="keyword">new</span> Random().nextLong()) + <span class="string">&quot;L;&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>groovy</category>
+      </categories>
+      <tags>
+        <tag>groovy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mypojo文件</title>
+    <url>/2021/06/07/groovy/mypojo-groovy/</url>
+    <content><![CDATA[<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.intellij.database.model.DasTable</span><br><span class="line"><span class="keyword">import</span> com.intellij.database.model.ObjectKind</span><br><span class="line"><span class="keyword">import</span> com.intellij.database.util.Case</span><br><span class="line"><span class="keyword">import</span> com.intellij.database.util.DasUtil</span><br><span class="line"><span class="keyword">import</span> java.io.*</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Available context bindings:</span></span><br><span class="line"><span class="comment"> *   SELECTION   Iterable&lt;DasObject&gt;</span></span><br><span class="line"><span class="comment"> *   PROJECT     project</span></span><br><span class="line"><span class="comment"> *   FILES       files helper</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">packageName = <span class="string">&quot;&quot;</span></span><br><span class="line">typeMapping = [</span><br><span class="line">        (<span class="regexp">~/(?i)tinyint|smallint|mediumint/</span>)      : <span class="string">&quot;Integer&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)int/</span>)                             : <span class="string">&quot;Long&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)bool|bit/</span>)                        : <span class="string">&quot;Boolean&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)float|double|decimal|real/</span>)       : <span class="string">&quot;Double&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)datetime|timestamp|date|time/</span>)    : <span class="string">&quot;Date&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)blob|binary|bfile|clob|raw|image/</span>): <span class="string">&quot;InputStream&quot;</span>,</span><br><span class="line">        (<span class="regexp">~/(?i)/</span>)                                : <span class="string">&quot;String&quot;</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">FILES.chooseDirectoryAndSave(<span class="string">&quot;Choose directory&quot;</span>, <span class="string">&quot;Choose where to store generated files&quot;</span>) &#123; dir -&gt;</span><br><span class="line">    SELECTION.filter &#123; it <span class="keyword">instanceof</span> DasTable &amp;&amp; it.getKind() == ObjectKind.TABLE &#125;.each &#123; generate(it, dir) &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> generate(table, dir) &#123;</span><br><span class="line">    <span class="keyword">def</span> className = javaClassName(table.getName(), <span class="literal">true</span>)</span><br><span class="line">    <span class="keyword">def</span> fields = calcFields(table)</span><br><span class="line">    packageName = getPackageName(dir)</span><br><span class="line">    PrintWriter printWriter = <span class="keyword">new</span> PrintWriter(<span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(<span class="keyword">new</span> File(dir, className + <span class="string">&quot;.java&quot;</span>)), <span class="string">&quot;UTF-8&quot;</span>))</span><br><span class="line">    printWriter.withPrintWriter &#123; out -&gt; generate(out, className, fields, table) &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    new File(dir, className + &quot;.java&quot;).withPrintWriter &#123; out -&gt; generate(out, className, fields,table) &#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取包所在文件夹路径</span></span><br><span class="line"><span class="keyword">def</span> getPackageName(dir) &#123;</span><br><span class="line">    <span class="keyword">return</span> dir.toString().replaceAll(<span class="string">&quot;\\\\&quot;</span>, <span class="string">&quot;.&quot;</span>).replaceAll(<span class="string">&quot;/&quot;</span>, <span class="string">&quot;.&quot;</span>).replaceAll(<span class="string">&quot;^.*src(\\.main\\.java\\.)?&quot;</span>, <span class="string">&quot;&quot;</span>) + <span class="string">&quot;;&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> generate(out, className, fields, table) &#123;</span><br><span class="line"><span class="comment">//    out.println &quot;package com.ft.framework.domain;&quot;</span></span><br><span class="line"><span class="comment">//    out.println &quot;package $packageName&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;import com.baomidou.mybatisplus.annotation.TableId;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;import com.baomidou.mybatisplus.annotation.TableName;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;import lombok.AllArgsConstructor;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;import lombok.Data;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;import lombok.NoArgsConstructor;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;import java.io.Serializable;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    Set types = <span class="keyword">new</span> HashSet()</span><br><span class="line"></span><br><span class="line">    fields.each() &#123;</span><br><span class="line">        types.add(it.type)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (types.contains(<span class="string">&quot;Date&quot;</span>)) &#123;</span><br><span class="line">        out.println <span class="string">&quot;import java.util.Date;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (types.contains(<span class="string">&quot;InputStream&quot;</span>)) &#123;</span><br><span class="line">        out.println <span class="string">&quot;import java.io.InputStream;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;/**\n&quot;</span> +</span><br><span class="line">            <span class="string">&quot; * @Description  \n&quot;</span> +</span><br><span class="line">            <span class="string">&quot; * @Author  rocky\n&quot;</span> +</span><br><span class="line">            <span class="string">&quot; * @Date &quot;</span> + <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd&quot;</span>).format(<span class="keyword">new</span> Date()) + <span class="string">&quot; \n&quot;</span> +</span><br><span class="line">            <span class="string">&quot; */&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;@Data&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;@TableName(value =\&quot;&quot;</span> + table.getName() + <span class="string">&quot;\&quot; )&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;public class $className  implements Serializable &#123;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    out.println genSerialID()</span><br><span class="line">    fields.each() &#123;</span><br><span class="line">        out.println <span class="string">&quot;&quot;</span></span><br><span class="line">        <span class="comment">// 输出注释</span></span><br><span class="line">        <span class="keyword">if</span> (isNotEmpty(it.commoent)) &#123;</span><br><span class="line">            out.println <span class="string">&quot;\t/**&quot;</span></span><br><span class="line">            out.println <span class="string">&quot;\t * $&#123;it.commoent.toString()&#125;&quot;</span></span><br><span class="line">            out.println <span class="string">&quot;\t */&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (it.annos != <span class="string">&quot;&quot;</span>) out.println <span class="string">&quot;   $&#123;it.annos.replace(&quot;</span>[<span class="meta">@Id</span>]<span class="string">&quot;, &quot;</span><span class="string">&quot;)&#125;&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 输出成员变量</span></span><br><span class="line">        out.println <span class="string">&quot;\tprivate $&#123;it.type&#125; $&#123;it.name&#125;;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输出get/set方法</span></span><br><span class="line"><span class="comment">//    fields.each() &#123;</span></span><br><span class="line"><span class="comment">//        out.println &quot;&quot;</span></span><br><span class="line"><span class="comment">//        out.println &quot;\tpublic $&#123;it.type&#125; get$&#123;it.name.capitalize()&#125;() &#123;&quot;</span></span><br><span class="line"><span class="comment">//        out.println &quot;\t\treturn this.$&#123;it.name&#125;;&quot;</span></span><br><span class="line"><span class="comment">//        out.println &quot;\t&#125;&quot;</span></span><br><span class="line"><span class="comment">//        out.println &quot;&quot;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//        out.println &quot;\tpublic void set$&#123;it.name.capitalize()&#125;($&#123;it.type&#125; $&#123;it.name&#125;) &#123;&quot;</span></span><br><span class="line"><span class="comment">//        out.println &quot;\t\tthis.$&#123;it.name&#125; = $&#123;it.name&#125;;&quot;</span></span><br><span class="line"><span class="comment">//        out.println &quot;\t&#125;&quot;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line">    out.println <span class="string">&quot;&quot;</span></span><br><span class="line">    out.println <span class="string">&quot;&#125;&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> calcFields(table) &#123;</span><br><span class="line">    DasUtil.getColumns(table).reduce([]) &#123; fields, col -&gt;</span><br><span class="line">        <span class="keyword">def</span> spec = Case.LOWER.apply(col.getDataType().getSpecification())</span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> typeStr = typeMapping.find &#123; p, t -&gt; p.matcher(spec).find() &#125;.value</span><br><span class="line">        <span class="keyword">def</span> comm = [</span><br><span class="line">                <span class="attr">colName :</span> col.getName(),</span><br><span class="line">                <span class="attr">name    :</span> javaName(col.getName(), <span class="literal">false</span>),</span><br><span class="line">                <span class="attr">type    :</span> typeStr,</span><br><span class="line">                <span class="symbol">commoent:</span> col.getComment(),</span><br><span class="line">                <span class="attr">annos   :</span> <span class="string">&quot;\t@TableField(value = \&quot;&quot;</span> + col.getName() + <span class="string">&quot;\&quot;)&quot;</span>]</span><br><span class="line">        <span class="keyword">if</span> (<span class="string">&quot;id&quot;</span>.equals(Case.LOWER.apply(col.getName())))</span><br><span class="line">            comm.annos += [<span class="string">&quot;@Id&quot;</span>]</span><br><span class="line">        fields += [comm]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 处理类名（这里是因为我的表都是以t_命名的，所以需要处理去掉生成类名时的开头的T，</span></span><br><span class="line"><span class="comment">// 如果你不需要那么请查找用到了 javaClassName这个方法的地方修改为 javaName 即可）</span></span><br><span class="line"><span class="keyword">def</span> javaClassName(str, capitalize) &#123;</span><br><span class="line">    <span class="keyword">def</span> s = com.intellij.psi.codeStyle.NameUtil.splitNameIntoWords(str)</span><br><span class="line">            .collect &#123; Case.LOWER.apply(it).capitalize() &#125;</span><br><span class="line">            .join(<span class="string">&quot;&quot;</span>)</span><br><span class="line">            .replaceAll(<span class="regexp">/[^\p&#123;javaJavaIdentifierPart&#125;[_]]/</span>, <span class="string">&quot;_&quot;</span>)</span><br><span class="line">    <span class="comment">// 去除开头的T  http://developer.51cto.com/art/200906/129168.htm</span></span><br><span class="line">    s = s[<span class="number">1.</span>.s.size() - <span class="number">1</span>]</span><br><span class="line">    capitalize || s.length() == <span class="number">1</span> ? s : Case.LOWER.apply(s[<span class="number">0</span>]) + s[<span class="number">1.</span>.<span class="number">-1</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> javaName(str, capitalize) &#123;</span><br><span class="line"><span class="comment">//    def s = str.split(/(?&lt;=[^\p&#123;IsLetter&#125;])/).collect &#123; Case.LOWER.apply(it).capitalize() &#125;</span></span><br><span class="line"><span class="comment">//            .join(&quot;&quot;).replaceAll(/[^\p&#123;javaJavaIdentifierPart&#125;]/, &quot;_&quot;)</span></span><br><span class="line"><span class="comment">//    capitalize || s.length() == 1? s : Case.LOWER.apply(s[0]) + s[1..-1]</span></span><br><span class="line">    <span class="keyword">def</span> s = com.intellij.psi.codeStyle.NameUtil.splitNameIntoWords(str)</span><br><span class="line">            .collect &#123; Case.LOWER.apply(it).capitalize() &#125;</span><br><span class="line">            .join(<span class="string">&quot;&quot;</span>)</span><br><span class="line">            .replaceAll(<span class="regexp">/[^\p&#123;javaJavaIdentifierPart&#125;[_]]/</span>, <span class="string">&quot;_&quot;</span>)</span><br><span class="line">    capitalize || s.length() == <span class="number">1</span> ? s : Case.LOWER.apply(s[<span class="number">0</span>]) + s[<span class="number">1.</span>.<span class="number">-1</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> isNotEmpty(content) &#123;</span><br><span class="line">    <span class="keyword">return</span> content != <span class="literal">null</span> &amp;&amp; content.toString().trim().length() &gt; <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> String changeStyle(String str, <span class="keyword">boolean</span> toCamel) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!str || str.size() &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> str</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (toCamel) &#123;</span><br><span class="line">        String r = str.toLowerCase().split(<span class="string">&#x27;_&#x27;</span>).collect &#123; cc -&gt; Case.LOWER.apply(cc).capitalize() &#125;.join(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> r[<span class="number">0</span>].toLowerCase() + r[<span class="number">1.</span>.<span class="number">-1</span>]</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        str = str[<span class="number">0</span>].toLowerCase() + str[<span class="number">1.</span>.<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">return</span> str.collect &#123; cc -&gt; ((<span class="keyword">char</span>) cc).isUpperCase() ? <span class="string">&#x27;_&#x27;</span> + cc.toLowerCase() : cc &#125;.join(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> String genSerialID() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;\tprivate static final long serialVersionUID =  &quot;</span> + Math.abs(<span class="keyword">new</span> Random().nextLong()) + <span class="string">&quot;L;&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>groovy</category>
+      </categories>
+      <tags>
+        <tag>groovy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GitHub基本命令</title>
-    <url>/2021/06/06/GitHub%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
+    <url>/2021/06/07/hexo/GitHub%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<span id="more"></span>
 
 
@@ -14,11 +229,12 @@
 ]]></content>
       <tags>
         <tag>git</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
     <title>hexo-next主题配置</title>
-    <url>/2021/06/07/hexo-next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</url>
+    <url>/2021/06/07/hexo/hexo-next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/***/themes/next/_config.yml #此路径为主题配置文件</span><br></pre></td></tr></table></figure>
 
 
@@ -58,7 +274,7 @@
   </entry>
   <entry>
     <title>hexo搭建博客笔记</title>
-    <url>/2021/06/06/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0/</url>
+    <url>/2021/06/07/hexo/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
 <li>GitHub账号</li>
 <li>安装nodejs、npm环境</li>
@@ -156,11 +372,1106 @@
 </tr>
 </tbody></table>
 <h2 id="免费图标"><a href="#免费图标" class="headerlink" title="免费图标"></a>免费图标</h2><p><a href="https://fontawesome.com/?from=io">https://fontawesome.com/?from=io</a></p>
-<h2 id="自定义分类"><a href="#自定义分类" class="headerlink" title="自定义分类"></a>自定义分类</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">修改hexo配置：</span><br><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  categories: /categories/</span><br><span class="line">  about: /about/</span><br><span class="line">  archives: /archives/</span><br><span class="line">  tags: /tags/</span><br><span class="line">  search: /search.xml</span><br><span class="line">  pic: /pic/ || images</span><br><span class="line">新添加的菜单需要翻译对应的中文</span><br><span class="line">hexo&gt;theme&gt;next&gt;languages&gt;zh-Hans.yml</span><br><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  categories: /categories/</span><br><span class="line">  about: /about/</span><br><span class="line">  archives: /archives/</span><br><span class="line">  tags: /tags/</span><br><span class="line">  search: /search.xml</span><br><span class="line">  pic: /pic/ || images</span><br></pre></td></tr></table></figure>
+<h2 id="自定义分类"><a href="#自定义分类" class="headerlink" title="自定义分类"></a>自定义分类</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">修改hexo配置：</span><br><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  categories: /categories/</span><br><span class="line">  about: /about/</span><br><span class="line">  archives: /archives/</span><br><span class="line">  tags: /tags/</span><br><span class="line">  search: /search.xml</span><br><span class="line">  pic: /pic/ || images</span><br><span class="line">新添加的菜单需要翻译对应的中文</span><br><span class="line">hexo&gt;theme&gt;next&gt;languages&gt;zh-Hans.yml</span><br><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  categories: /categories/</span><br><span class="line">  about: /about/</span><br><span class="line">  archives: /archives/</span><br><span class="line">  tags: /tags/</span><br><span class="line">  search: /search.xml</span><br><span class="line">  pic: /pic/</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo新建文章默认头部</title>
+    <url>/2021/06/07/hexo/hexo%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0%E9%BB%98%E8%AE%A4%E5%A4%B4%E9%83%A8/</url>
+    <content><![CDATA[<p>头部</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo新建文章默认头部</span><br><span class="line">date: 2021-6-7 15:08:07</span><br><span class="line">tags: [hexo]</span><br><span class="line">categories: hexo</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt; </span><br><span class="line">比如 hexo new aaa bbb 会在 source/_posts/ 下创建bbb.md 和bbb文件夹</span><br><span class="line">bbb.md的默认值是</span><br><span class="line"></span><br><span class="line">layout: aaa</span><br><span class="line">title: bbb</span><br><span class="line">date: 2021-06-07 15:18:52</span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea文档很详细</title>
+    <url>/2021/06/07/idea/idea%E6%96%87%E6%A1%A3%E5%BE%88%E8%AF%A6%E7%BB%86/</url>
+    <content><![CDATA[<h1 id="自己电脑修改的快捷键"><a href="#自己电脑修改的快捷键" class="headerlink" title="自己电脑修改的快捷键"></a>自己电脑修改的快捷键</h1><p>我的设置是</p>
+<p>Alt+D    进入/退出全屏(Enter Full Screen)</p>
+<p>Alt+S    显示/隐藏状态栏(Status Bar)</p>
+<p>Alt+T    显示/隐藏工具栏(Toolbar)</p>
+<p>Alt+B    显示/隐藏工具按钮(Tool Buttons)</p>
+<p>Alt+N    显示/隐藏导航栏(Navigation Bar)        alt+home     导航</p>
+<p>Alt+G     GSON</p>
+<p>因为我Structure结构用的比较多，就把Tool Windows中Favorites和Structure互换了一下，如下</p>
+<p>Favorites   Alt+2</p>
+<p>Structure   Alt+7</p>
+<p>Ctrl+Alt+O 自动整理导入的包</p>
+<h1 id="自己整理快捷键"><a href="#自己整理快捷键" class="headerlink" title="自己整理快捷键"></a>自己整理快捷键</h1><p>注意：idea没有提示可能是打开了省电模式</p>
+<p>ctrl+shift+enter  收尾操作</p>
+<p><code>ctrl+shift+A</code>    快捷键弹出action框</p>
+<p> 在菜单栏中的File下倒数第二个Power Save Mode取消就可以了。</p>
+<p> psvm/sout    main/System.out.println(); </p>
+<p>Ctrl+J    查看更多</p>
+<p> Ctrl + Alt + M       抽取代码变函数，或者 鼠标右击 》Refactor 》Extract 》Method </p>
+<p> Pom文件 alt+insert</p>
+<p> IDEA 提交顺序 提交的顺序是VCS -&gt;Git-&gt;commit file 写注释  </p>
+<p>搜索：</p>
+<p>Ctrl+F/R 当前文件下查找/替换文本，加Shift键，当前工程路径下查找/替换文本</p>
+<p>Ctrl+N 查找类</p>
+<p>Ctrl+Shift+N 查找文件</p>
+<p>Ctrl+Shift+Alt+N 查找类中的方法或变量</p>
+<p>Shift+Shift 全局查找</p>
+<p>Ctrl + T +鼠标左键   显示所有实现类</p>
+<p> Ctrl+Alt+V 返回值自动添加变量</p>
+<p>ctrl+alt+u   Diagrams</p>
+<p>ctrl+shift+v 粘贴历史记录</p>
+<p>F5 新建目录</p>
+<p>配置注释模板</p>
+<hr>
+<p>进入/返回方法快捷键</p>
+<p>Ctrl+B 进入光标所在方法定义的地方或返回该方法被使用的地方（代替Ctrl+鼠标点击方法进入方式，避免了手指在键盘和鼠标之间切换，非常好用的快捷键）</p>
+<p>Ctrl+Alt+P 统一修改变量名，</p>
+<p>Ctrl+Alt+H 查看方法被调用</p>
+<p>Ctrl+Alt+B 进入子类或子方法定义的地方，</p>
+<p>Ctrl+F12 查看当前类的所有方法  alt+7</p>
+<p>Ctrl+H 显示该类继承关系结构图</p>
+<p>Ctrl+Q 显示类/方法/变量上的doc注释说明</p>
+<p>Ctrl + G 在当前文件跳转到指定行处</p>
+<p>Ctrl + J 插入自定义动态代码模板 </p>
+<p>Ctrl + P 方法参数提示显示 </p>
+<p>Ctrl + Q 光标所在的变量 / 类名 / 方法名等上面（也可以在提示补充的时候按），显示文档内容 </p>
+<p>Ctrl + U 前往当前光标所在的方法的父类的方法 / 接口定义 </p>
+<p>Ctrl + B 进入光标所在的方法/变量的接口或是定义出，等效于 Ctrl + 左键单击  </p>
+<p>Ctrl + K 版本控制提交项目，需要此项目有加入到版本控制才可用 </p>
+<p>Ctrl + T 版本控制更新项目，需要此项目有加入到版本控制才可用 </p>
+<p>Ctrl + H 显示当前类的层次结构 </p>
+<p>Ctrl + O 选择可重写的方法 </p>
+<p>Ctrl + I 选择可继承的方法 </p>
+<p>Ctrl + + 展开代码 </p>
+<p>Ctrl + - 折叠代码 </p>
+<p>Ctrl + / 注释光标所在行代码，会根据当前不同文件类型使用不同的注释符号 （必备）  </p>
+<p>Ctrl + [ 移动光标到当前所在代码的花括号开始位置 </p>
+<p>Ctrl + ] 移动光标到当前所在代码的花括号结束位置 </p>
+<p>光标定位及选中快捷键</p>
+<p>Ctrl+Alt+Left/Right 光标定位到上一个/下一个浏览位置处</p>
+<p>Ctrl+Shift+Backspace 光标定位到上次修改的地方</p>
+<p>Alt+Up/Down 移动光标到上一个/下一个方法开始处</p>
+<p>Ctrl+Left/Right 移动光标到前一个/后一个单词处，加Shift键，产生选中效果</p>
+<p>Ctrl+[/] 移动光标到前/后代码块，加Shift键，产生选中效果</p>
+<p>Ctrl+W 按语法选中代码，连续按会有其他效果，加Shift键，产生反向选中效果</p>
+<p>F2 快速定位到下一个错误和警告处，加Shift键，定位到上一个错误处</p>
+<p>Ctrl+”+/-“ 当前方法展开/折叠，加Shift键，全部方法展开/折叠</p>
+<p>Ctrl+Alt+T 在选中代码情况下，Surround With(if/else/try catch…) 快速包裹代码</p>
+<p>Ctrl+Alt+V 提出选中内容为局部变量</p>
+<hr>
+<p>常用快捷键</p>
+<p>ctrl+alt+L  格式化代码    同等于 ctrl+shift+F</p>
+<p>F5 新建目录</p>
+<p>ctrl+alt+T         添加if while等语句  </p>
+<p>Alt+insert 生成get或set方法快捷键</p>
+<p>Ctrl+Y    删除行、</p>
+<p>Ctrl+D    复制行、</p>
+<p>Ctrl+Shift+AltJ    批量修改变量名、</p>
+<p>Ctrl+&lt;/&gt;折叠代码就不多说了。</p>
+<p>ctrl+F4 关闭当前窗口 </p>
+<p>Ctrl+Shift+F9 </p>
+<p>查看被调用：alt+F7</p>
+<p>Ctrl + Shift + Alt + / </p>
+<p>Ctr+Shift+U 大小写转化</p>
+<p>Shift+Shift 全局查找</p>
+<hr>
+<p>删除/插入相关快捷键</p>
+<p>Ctrl+Backspace 按单词删除</p>
+<p>Shift+Enter 向下插入新行，配合Ctrl键，先代码补全再插入新行</p>
+<p>Ctrl+Alt+Enter 向上插入新行</p>
+<p>Ctrl+Shift+Up/Down 整体向上/下移动语句块/方法</p>
+<p>Alt+Shift+Up/Down 单行向上/下移一行</p>
+<hr>
+<p>调试：</p>
+<p>ctrl+shift+F10  运行  同等于 F11</p>
+<p>Alt + F8    在 Debug 的状态下，选中对象，弹出可输入计算表达式调试框，查看该输入内容的调试结果</p>
+<p>Shift + F7 在 Debug 模式下，智能步入。断点所在行上有多个方法调用，会弹出进入哪个方法 </p>
+<p>Shift + F8 在 Debug 模式下，跳出，表现出来的效果跟 F9 一样 </p>
+<p>Shift + F9 等效于点击工具栏的 Debug 按钮 </p>
+<p>Shift + F10 等效于点击工具栏的 Run 按钮 </p>
+<p>文件之间定位相关快捷</p>
+<p>Ctrl+E/Ctrl+Tab 查看/切换最近打开过的文件（通过方向键上下选择后，按Enter键进入）</p>
+<p>ALT+Left/Right 打开的代码编辑窗口中左右切换</p>
+<p>注释：</p>
+<p>ctrl+/        这个是多行代码分行注释，每行一个注释符号</p>
+<p>ctrl+shift+/    这个是多行代码注释在一个块里，只在开头和结尾有注释符号</p>
+<hr>
+<p>自动按语法选中代码的Ctrl+W以及反向的Ctrl+Shift+W了。</p>
+<p>Ctrl+Left/Right移动光标到前/后单词，Ctrl+[/]移动到前/后代码块，这些类Vim风格的光标移动也是一大亮点。</p>
+<p>以上Ctrl+Left/Right/[]加上Shift的话就能选中跳跃范围内的代码。</p>
+<p>1.重写接口实现类:Ctrl+I</p>
+<p>2.搜索：Shift+Shift  </p>
+<p>3.生成get或set方法快捷键：Alt+insert；</p>
+<p>4.导入未实现的方法,强制类型转换：Alt+Enter</p>
+<p>5.断点调式查看值：Alt+F8</p>
+<p>6.引用快捷键：Alt+F7</p>
+<p>6.maven构建命令：install -Dmaven.test.skip=true</p>
+<p>7.运行程序：shift+Ctrl+F10</p>
+<p>8.try…catch..:Ctrl+Alt+T</p>
+<p>9.格式化代码：Ctrl+Alt+L</p>
+<p>10.去除未引用的jar:Ctrl+Alt+O</p>
+<p>11.设置:Ctrl+Alt+S</p>
+<p>12:替换：Ctrl+R</p>
+<p>13:新建Modules：Ctrl+Shift+Alt+T</p>
+<p>14:psvm：public static void main(String[] args)</p>
+<p>15:sout：System.out.println();</p>
+<p>16：全文查找：Ctrl+Shift+F</p>
+<p>来源： <a href="https://www.cnblogs.com/wjh123/p/6187953.html">https://www.cnblogs.com/wjh123/p/6187953.html</a></p>
+<p>调试：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">F9    resume programe 恢复程序</span><br><span class="line">Alt+F10    show execution point 显示执行断点</span><br><span class="line">F8   Step Over 相当于eclipse的f6  跳到下一步</span><br><span class="line">F7  Step Into 相当于eclipse的f5就是  进入到代码</span><br><span class="line">Alt+shift+F7  Force Step Into 这个是强制进入代码</span><br><span class="line">Shift+F8 Step Out 相当于eclipse的f8跳到下一个断点，也相当于eclipse的f7跳出函数</span><br><span class="line">Atl+F9  Run To Cursor 运行到光标处</span><br><span class="line">ctrl+shift+F9   debug运行java类</span><br><span class="line">ctrl+shift+F10  正常运行java类</span><br><span class="line">alt+F8    debug时选中查看值</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>IntelliJ IDEA 的便捷操作性，快捷键的功劳占了一大半，对于各个快捷键组合请认真对待。IntelliJ IDEA 本身的设计思维是提倡键盘优先于鼠标的，所以各种快捷键组合层出不穷，对于快捷键设置也有各种支持，对于其他 IDE 的快捷键组合也有预设模板进行支持。</p>
+<p>关于各个快捷键的频率分类上可能每个人都有各自的看法，下面的整理也只是已我个人的使用习惯来划分的，而我应该是可以代表某一部分小众人员。但是我个人还是建议你可以在我的基础上整理一份属于的快捷键目录，本篇文章也只是起到一个工具和引子的作用。</p>
+<p>对于下面各个快捷键的使介绍描述也许用我个人语言翻译起来不够准确或是不全面，且在不同的文件类型上按出来的效果也可能结果不太一样,所以 <strong>强烈建议</strong> 你自己把各个快捷键都亲自操作下体会下各个快捷键的实际用法。</p>
+<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>由于文化的不同，我们使用的电脑必备一个软件就是中文输入法，而目前大多数人都使用搜狗拼音输入法或是其他类似的。而这些输入法跟 IntelliJ IDEA 有一个万恶的冲突永恒不变：快捷键冲突。所以为了配合 IntelliJ IDEA，我们要去掉这些输入法下的所有快捷键。</p>
+<blockquote>
+<ul>
+<li>如上图红色圈住内容所示，默认是 <code>逗号</code> 我改为了 ESC 键下的 <code>波浪号</code>，<code>Ctrl + 逗号</code> 这个快捷键适合做智能提示用，下面的快捷键列表会讲。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>如上图红色圈住内容所示，这些快捷键很容易跟 IntelliJ IDEA 快捷键冲突，需要全部去掉。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>如上图红色圈住内容所示，QQ 这些快捷键也很容易跟 IntelliJ IDEA 快捷键冲突，需要全部去掉，最多保持一个截图功能即可。</li>
+</ul>
+</blockquote>
+<p>可能还有其他一些软件，比如网易云音乐、有道词典等等这些软件都可能存在快捷键冲突，所以为了 IntelliJ IDEA 这些软件的快捷键都是值得舍弃的，如果你在开发的时候。</p>
+<h2 id="Ctrl"><a href="#Ctrl" class="headerlink" title="Ctrl"></a>Ctrl</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + F</td>
+<td>在当前文件进行文本查找 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + R</td>
+<td>在当前文件进行文本替换 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Z</td>
+<td>撤销 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Y</td>
+<td>删除光标所在行 或 删除选中的行 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + X</td>
+<td>剪切光标所在行 或 剪切选择内容</td>
+</tr>
+<tr>
+<td>Ctrl + C</td>
+<td>复制光标所在行 或 复制选择内容</td>
+</tr>
+<tr>
+<td>Ctrl + D</td>
+<td>复制光标所在行 或 复制选择内容，并把复制内容插入光标位置下面 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + W</td>
+<td>递进式选择代码块。可选中光标所在的单词或段落，连续按会在原有选中的基础上再扩展选中范围 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + E</td>
+<td>显示最近打开的文件记录列表</td>
+</tr>
+<tr>
+<td>Ctrl + N</td>
+<td>根据输入的 <strong>类名</strong> 查找类文件</td>
+</tr>
+<tr>
+<td>Ctrl + G</td>
+<td>在当前文件跳转到指定行处</td>
+</tr>
+<tr>
+<td>Ctrl + J</td>
+<td>插入自定义动态代码模板</td>
+</tr>
+<tr>
+<td>Ctrl + P</td>
+<td>方法参数提示显示</td>
+</tr>
+<tr>
+<td>Ctrl + Q</td>
+<td>光标所在的变量 / 类名 / 方法名等上面（也可以在提示补充的时候按），显示文档内容</td>
+</tr>
+<tr>
+<td>Ctrl + U</td>
+<td>前往当前光标所在的方法的父类的方法 / 接口定义</td>
+</tr>
+<tr>
+<td>Ctrl + B</td>
+<td>进入光标所在的方法/变量的接口或是定义出，等效于 <code>Ctrl + 左键单击</code></td>
+</tr>
+<tr>
+<td>Ctrl + K</td>
+<td>版本控制提交项目，需要此项目有加入到版本控制才可用</td>
+</tr>
+<tr>
+<td>Ctrl + T</td>
+<td>版本控制更新项目，需要此项目有加入到版本控制才可用</td>
+</tr>
+<tr>
+<td>Ctrl + H</td>
+<td>显示当前类的层次结构</td>
+</tr>
+<tr>
+<td>Ctrl + O</td>
+<td>选择可重写的方法</td>
+</tr>
+<tr>
+<td>Ctrl + I</td>
+<td>选择可继承的方法</td>
+</tr>
+<tr>
+<td>Ctrl + +</td>
+<td>展开代码</td>
+</tr>
+<tr>
+<td>Ctrl + -</td>
+<td>折叠代码</td>
+</tr>
+<tr>
+<td>Ctrl + /</td>
+<td>注释光标所在行代码，会根据当前不同文件类型使用不同的注释符号 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + [</td>
+<td>移动光标到当前所在代码的花括号开始位置</td>
+</tr>
+<tr>
+<td>Ctrl + ]</td>
+<td>移动光标到当前所在代码的花括号结束位置</td>
+</tr>
+<tr>
+<td>Ctrl + F1</td>
+<td>在光标所在的错误代码出显示错误信息</td>
+</tr>
+<tr>
+<td>Ctrl + F3</td>
+<td>调转到所选中的词的下一个引用位置</td>
+</tr>
+<tr>
+<td>Ctrl + F4</td>
+<td>关闭当前编辑文件</td>
+</tr>
+<tr>
+<td>Ctrl + F8</td>
+<td>在 Debug 模式下，设置光标当前行为断点，如果当前已经是断点则去掉断点</td>
+</tr>
+<tr>
+<td>Ctrl + F9</td>
+<td>执行 Make Project 操作</td>
+</tr>
+<tr>
+<td>Ctrl + F11</td>
+<td>选中文件 / 文件夹，使用助记符设定 / 取消书签</td>
+</tr>
+<tr>
+<td>Ctrl + F12</td>
+<td>弹出当前文件结构层，可以在弹出的层上直接输入，进行筛选</td>
+</tr>
+<tr>
+<td>Ctrl + Tab</td>
+<td>编辑窗口切换，如果在切换的过程又加按上delete，则是关闭对应选中的窗口</td>
+</tr>
+<tr>
+<td>Ctrl + Enter</td>
+<td>智能分隔行</td>
+</tr>
+<tr>
+<td>Ctrl + End</td>
+<td>跳到文件尾</td>
+</tr>
+<tr>
+<td>Ctrl + Home</td>
+<td>跳到文件头</td>
+</tr>
+<tr>
+<td>Ctrl + Space</td>
+<td>基础代码补全，默认在 Windows 系统上被输入法占用，需要进行修改，建议修改为 <code>Ctrl + 逗号</code> <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Delete</td>
+<td>删除光标后面的单词或是中文句</td>
+</tr>
+<tr>
+<td>Ctrl + BackSpace</td>
+<td>删除光标前面的单词或是中文句</td>
+</tr>
+<tr>
+<td>Ctrl + 1,2,3…9</td>
+<td>定位到对应数值的书签位置</td>
+</tr>
+<tr>
+<td>Ctrl + 左键单击</td>
+<td>在打开的文件标题上，弹出该文件路径</td>
+</tr>
+<tr>
+<td>Ctrl + 光标定位</td>
+<td>按 Ctrl 不要松开，会显示光标所在的类信息摘要</td>
+</tr>
+<tr>
+<td>Ctrl + 左方向键</td>
+<td>光标跳转到当前单词 / 中文句的左侧开头位置</td>
+</tr>
+<tr>
+<td>Ctrl + 右方向键</td>
+<td>光标跳转到当前单词 / 中文句的右侧开头位置</td>
+</tr>
+<tr>
+<td>Ctrl + 前方向键</td>
+<td>等效于鼠标滚轮向前效果</td>
+</tr>
+<tr>
+<td>Ctrl + 后方向键</td>
+<td>等效于鼠标滚轮向后效果</td>
+</tr>
+</tbody></table>
+<h2 id="Alt"><a href="#Alt" class="headerlink" title="Alt"></a>Alt</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Alt + `</td>
+<td>显示版本控制常用操作菜单弹出层</td>
+</tr>
+<tr>
+<td>Alt + Q</td>
+<td>弹出一个提示，显示当前类的声明 / 上下文信息</td>
+</tr>
+<tr>
+<td>Alt + F1</td>
+<td>显示当前文件选择目标弹出层，弹出层中有很多目标可以进行选择</td>
+</tr>
+<tr>
+<td>Alt + F2</td>
+<td>对于前面页面，显示各类浏览器打开目标选择弹出层</td>
+</tr>
+<tr>
+<td>Alt + F3</td>
+<td>选中文本，逐个往下查找相同文本，并高亮显示</td>
+</tr>
+<tr>
+<td>Alt + F7</td>
+<td>查找光标所在的方法 / 变量 / 类被调用的地方</td>
+</tr>
+<tr>
+<td>Alt + F8</td>
+<td>在 Debug 的状态下，选中对象，弹出可输入计算表达式调试框，查看该输入内容的调试结果</td>
+</tr>
+<tr>
+<td>Alt + Home</td>
+<td>定位 / 显示到当前文件的 <code>Navigation Bar</code></td>
+</tr>
+<tr>
+<td>Alt + Enter</td>
+<td>IntelliJ IDEA 根据光标所在问题，提供快速修复选择，光标放在的位置不同提示的结果也不同 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Alt + Insert</td>
+<td>代码自动生成，如生成对象的 set / get 方法，构造函数，toString() 等</td>
+</tr>
+<tr>
+<td>Alt + 左方向键</td>
+<td>按左方向切换当前已打开的文件视图</td>
+</tr>
+<tr>
+<td>Alt + 右方向键</td>
+<td>按右方向切换当前已打开的文件视图</td>
+</tr>
+<tr>
+<td>Alt + 前方向键</td>
+<td>当前光标跳转到当前文件的前一个方法名位置</td>
+</tr>
+<tr>
+<td>Alt + 后方向键</td>
+<td>当前光标跳转到当前文件的后一个方法名位置</td>
+</tr>
+<tr>
+<td>Alt + 1,2,3…9</td>
+<td>显示对应数值的选项卡，其中 1 是 Project 用得最多</td>
+</tr>
+</tbody></table>
+<h2 id="Shift"><a href="#Shift" class="headerlink" title="Shift"></a>Shift</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Shift + F1</td>
+<td>如果有外部文档可以连接外部文档</td>
+</tr>
+<tr>
+<td>Shift + F2</td>
+<td>跳转到上一个高亮错误 或 警告位置</td>
+</tr>
+<tr>
+<td>Shift + F3</td>
+<td>在查找模式下，查找匹配上一个</td>
+</tr>
+<tr>
+<td>Shift + F4</td>
+<td>对当前打开的文件，使用新Windows窗口打开，旧窗口保留</td>
+</tr>
+<tr>
+<td>Shift + F6</td>
+<td>对文件 / 文件夹 重命名</td>
+</tr>
+<tr>
+<td>Shift + F7</td>
+<td>在 Debug 模式下，智能步入。断点所在行上有多个方法调用，会弹出进入哪个方法</td>
+</tr>
+<tr>
+<td>Shift + F8</td>
+<td>在 Debug 模式下，跳出，表现出来的效果跟 <code>F9</code> 一样</td>
+</tr>
+<tr>
+<td>Shift + F9</td>
+<td>等效于点击工具栏的 <code>Debug</code> 按钮</td>
+</tr>
+<tr>
+<td>Shift + F10</td>
+<td>等效于点击工具栏的 <code>Run</code> 按钮</td>
+</tr>
+<tr>
+<td>Shift + F11</td>
+<td>弹出书签显示层</td>
+</tr>
+<tr>
+<td>Shift + Tab</td>
+<td>取消缩进</td>
+</tr>
+<tr>
+<td>Shift + ESC</td>
+<td>隐藏当前 或 最后一个激活的工具窗口</td>
+</tr>
+<tr>
+<td>Shift + End</td>
+<td>选中光标到当前行尾位置</td>
+</tr>
+<tr>
+<td>Shift + Home</td>
+<td>选中光标到当前行头位置</td>
+</tr>
+<tr>
+<td>Shift + Enter</td>
+<td>开始新一行。光标所在行下空出一行，光标定位到新行位置</td>
+</tr>
+<tr>
+<td>Shift + 左键单击</td>
+<td>在打开的文件名上按此快捷键，可以关闭当前打开文件</td>
+</tr>
+<tr>
+<td>Shift + 滚轮前后滚动</td>
+<td>当前文件的横向滚动轴滚动</td>
+</tr>
+</tbody></table>
+<h2 id="Ctrl-Alt"><a href="#Ctrl-Alt" class="headerlink" title="Ctrl + Alt"></a>Ctrl + Alt</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + Alt + L</td>
+<td>格式化代码，可以对当前文件和整个包目录使用 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Alt + O</td>
+<td>优化导入的类，可以对当前文件和整个包目录使用 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Alt + I</td>
+<td>光标所在行 或 选中部分进行自动代码缩进，有点类似格式化</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + T</td>
+<td>对选中的代码弹出环绕选项弹出层</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + J</td>
+<td>弹出模板选择窗口，讲选定的代码加入动态模板中</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + H</td>
+<td>调用层次</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + B</td>
+<td>在某个调用的方法名上使用会跳到具体的实现处，可以跳过接口</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + V</td>
+<td>快速引进变量</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + Y</td>
+<td>同步、刷新</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + S</td>
+<td>打开 IntelliJ IDEA 系统设置</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + F7</td>
+<td>显示使用的地方。寻找被该类或是变量被调用的地方，用弹出框的方式找出来</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + F11</td>
+<td>切换全屏模式</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + Enter</td>
+<td>光标所在行上空出一行，光标定位到新行</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + Home</td>
+<td>弹出跟当前文件有关联的文件弹出层</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + Space</td>
+<td>类名自动完成</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + 左方向键</td>
+<td>退回到上一个操作的地方 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Alt + 右方向键</td>
+<td>前进到上一个操作的地方 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Alt + 前方向键</td>
+<td>在查找模式下，跳到上个查找的文件</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + 后方向键</td>
+<td>在查找模式下，跳到下个查找的文件</td>
+</tr>
+</tbody></table>
+<h2 id="Ctrl-Shift"><a href="#Ctrl-Shift" class="headerlink" title="Ctrl + Shift"></a>Ctrl + Shift</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + Shift + F</td>
+<td>根据输入内容查找整个项目 或 指定目录内文件 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Shift + R</td>
+<td>根据输入内容替换对应内容，范围为整个项目 或 指定目录内文件 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Shift + J</td>
+<td>自动将下一行合并到当前行末尾 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Z</td>
+<td>取消撤销 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Shift + W</td>
+<td>递进式取消选择代码块。可选中光标所在的单词或段落，连续按会在原有选中的基础上再扩展取消选中范围 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Shift + N</td>
+<td>通过文件名定位 / 打开文件 / 目录，打开目录需要在输入的内容后面多加一个正斜杠 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Shift + U</td>
+<td>对选中的代码进行大 / 小写轮流转换 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Shift + T</td>
+<td>对当前类生成单元测试类，如果已经存在的单元测试类则可以进行选择</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + C</td>
+<td>复制当前文件磁盘路径到剪贴板</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + V</td>
+<td>弹出缓存的最近拷贝的内容管理器弹出层</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + E</td>
+<td>显示最近修改的文件列表的弹出层</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + H</td>
+<td>显示方法层次结构</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + B</td>
+<td>跳转到类型声明处</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + I</td>
+<td>快速查看光标所在的方法 或 类的定义</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + A</td>
+<td>查找动作 / 设置</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + /</td>
+<td>代码块注释 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Shift + [</td>
+<td>选中从光标所在位置到它的顶部中括号位置</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + ]</td>
+<td>选中从光标所在位置到它的底部中括号位置</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + +</td>
+<td>展开所有代码</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + -</td>
+<td>折叠所有代码</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + F7</td>
+<td>高亮显示所有该选中文本，按Esc高亮消失</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + F8</td>
+<td>在 Debug 模式下，指定断点进入条件</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + F9</td>
+<td>编译选中的文件 / 包 / Module</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + F12</td>
+<td>编辑器最大化</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Space</td>
+<td>智能代码提示</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Enter</td>
+<td>自动结束代码，行末自动添加分号 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Backspace</td>
+<td>退回到上次修改的地方</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + 1,2,3…9</td>
+<td>快速添加指定数值的书签</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + 左方向键</td>
+<td>在代码文件上，光标跳转到当前单词 / 中文句的左侧开头位置，同时选中该单词 / 中文句</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + 右方向键</td>
+<td>在代码文件上，光标跳转到当前单词 / 中文句的右侧开头位置，同时选中该单词 / 中文句</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + 左方向键</td>
+<td>在光标焦点是在工具选项卡上，缩小选项卡区域</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + 右方向键</td>
+<td>在光标焦点是在工具选项卡上，扩大选项卡区域</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + 前方向键</td>
+<td>光标放在方法名上，将方法移动到上一个方法前面，调整方法排序</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + 后方向键</td>
+<td>光标放在方法名上，将方法移动到下一个方法前面，调整方法排序</td>
+</tr>
+</tbody></table>
+<h2 id="Alt-Shift"><a href="#Alt-Shift" class="headerlink" title="Alt + Shift"></a>Alt + Shift</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Alt + Shift + N</td>
+<td>选择 / 添加 task</td>
+</tr>
+<tr>
+<td>Alt + Shift + F</td>
+<td>显示添加到收藏夹弹出层</td>
+</tr>
+<tr>
+<td>Alt + Shift + C</td>
+<td>查看最近操作项目的变化情况列表</td>
+</tr>
+<tr>
+<td>Alt + Shift + F</td>
+<td>添加到收藏夹</td>
+</tr>
+<tr>
+<td>Alt + Shift + I</td>
+<td>查看项目当前文件</td>
+</tr>
+<tr>
+<td>Alt + Shift + F7</td>
+<td>在 Debug 模式下，下一步，进入当前方法体内，如果方法体还有方法，则会进入该内嵌的方法中，依此循环进入</td>
+</tr>
+<tr>
+<td>Alt + Shift + F9</td>
+<td>弹出 <code>Debug</code> 的可选择菜单</td>
+</tr>
+<tr>
+<td>Alt + Shift + F10</td>
+<td>弹出 <code>Run</code> 的可选择菜单</td>
+</tr>
+<tr>
+<td>Alt + Shift + 左键双击</td>
+<td>选择被双击的单词 / 中文句，按住不放，可以同时选择其他单词 / 中文句</td>
+</tr>
+<tr>
+<td>Alt + Shift + 前方向键</td>
+<td>移动光标所在行向上移动</td>
+</tr>
+<tr>
+<td>Alt + Shift + 后方向键</td>
+<td>移动光标所在行向下移动</td>
+</tr>
+</tbody></table>
+<h2 id="Ctrl-Shift-Alt"><a href="#Ctrl-Shift-Alt" class="headerlink" title="Ctrl + Shift + Alt"></a>Ctrl + Shift + Alt</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + Shift + Alt + V</td>
+<td>无格式黏贴</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Alt + N</td>
+<td>前往指定的变量 / 方法</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Alt + S</td>
+<td>打开当前项目设置</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Alt + C</td>
+<td>复制参考信息</td>
+</tr>
+</tbody></table>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>F2</td>
+<td>跳转到下一个高亮错误 或 警告位置 <code>（必备）</code></td>
+</tr>
+<tr>
+<td>F3</td>
+<td>在查找模式下，定位到下一个匹配处</td>
+</tr>
+<tr>
+<td>F4</td>
+<td>编辑源</td>
+</tr>
+<tr>
+<td>F7</td>
+<td>在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则进入当前方法体内，如果该方法体还有方法，则不会进入该内嵌的方法中</td>
+</tr>
+<tr>
+<td>F8</td>
+<td>在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则不进入当前方法体内</td>
+</tr>
+<tr>
+<td>F9</td>
+<td>在 Debug 模式下，恢复程序运行，但是如果该断点下面代码还有断点则停在下一个断点上</td>
+</tr>
+<tr>
+<td>F11</td>
+<td>添加书签</td>
+</tr>
+<tr>
+<td>F12</td>
+<td>回到前一个工具窗口</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>缩进</td>
+</tr>
+<tr>
+<td>ESC</td>
+<td>从工具窗口进入代码文件窗口</td>
+</tr>
+<tr>
+<td>连按两次Shift</td>
+<td>弹出 <code>Search Everywhere</code> 弹出层</td>
+</tr>
+</tbody></table>
+<h2 id="官网快捷键资料"><a href="#官网快捷键资料" class="headerlink" title="官网快捷键资料"></a>官网快捷键资料</h2><blockquote>
+<ul>
+<li>Windows / Linux：<a href="https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf">https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf</a></li>
+<li>Mac OS X：<a href="https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf">https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf</a></li>
+</ul>
+</blockquote>
+<h2 id="第三方快捷键资料"><a href="#第三方快捷键资料" class="headerlink" title="第三方快捷键资料"></a>第三方快捷键资料</h2><blockquote>
+<ul>
+<li>来自 eta02913：<a href="http://xinyuwu.iteye.com/blog/1005454">http://xinyuwu.iteye.com/blog/1005454</a></li>
+</ul>
+</blockquote>
+<h2 id="快捷键修改"><a href="#快捷键修改" class="headerlink" title="快捷键修改"></a>快捷键修改</h2><blockquote>
+<ul>
+<li>按 <code>Ctrl + Alt + S</code> 弹出 IDE 设置，如上图选择左侧的 <code>Keymap</code>。</li>
+<li>IntelliJ IDEA 支持两种方式来筛选我们要找的快捷键，一种是上图标注 1 所示的，通过输入快捷键描述内容；一种是上图标注 2 所示的，通过 <strong>按</strong>指定快捷键快捷键，这里需要再次强调的是，这个输入框是自动监听你当前按下的按键，而不是用来输入的。</li>
+<li>上图标注 3 所示，初安装的 IntelliJ IDEA 使用的是 <code>Default</code> 的快捷键模板，IntelliJ IDEA 默认的快捷键模板都是不可修改的。如果你直接修改，当前这个位置 IntelliJ IDEA 会自动变成 <code>Default Copy</code>，建议你养成习惯，修改之前先点击 <code>Copy</code>，拷贝一套快捷键模板，然后输入自己的命名。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>IntelliJ IDEA 是支持一个操作命令同时设置多个快捷键组合，就如上图的 <code>Backspace</code>，同时支持 <code>Backspace</code> 和 <code>Shift + Backspace</code> 两组快捷键。</li>
+<li>要修改某个快捷键，选中快捷键介绍内容，右键，就会弹出如上图标注 1 所示操作选择。</li>
+<li>命令 <code>Add Keyboard Shortcut</code> 用来添加新纯键盘快捷键组合。</li>
+<li>命令 <code>Add Mouse Shortcut</code> 用来添加新 <code>键盘 + 鼠标</code> 快捷键组合，比如设置 <code>Ctrl + 左键单击</code> 这类快捷组合。其中在弹出的添加面板中 <code>Click Pad</code> 是用来监听当前鼠标是左键单击还是右键单击。</li>
+<li>命令 <code>Add Abbreviation</code> 根据 IntelliJ IDEA 的版本文档解释，添加简称主要是为了方便 <code>Search Everywhere</code> 中使用，但是我尝试之后发现没办法根据我设置的简称搜索，暂时无法了解其作用。</li>
+<li>命令 <code>Remove 快捷键</code> 移出当前操作命令已设置的快捷键组合，由于 IntelliJ IDEA 默认就占用了很多快捷键组合，所以如果你要修改某个快捷键，建议还是删除掉旧的。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>IntelliJ IDEA 对其他 IDE 用户很友好，比如如上图对于其他主流的 IDE，快捷键上已经默认了有其过度快捷键模板了，但是我还是建议你专心使用 IntelliJ IDEA 的默认。</li>
+</ul>
+</blockquote>
+<h2 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h2><blockquote>
+<ul>
+<li>如果你是一个 Vim 粉，IntelliJ IDEA 也为你准备了一个方案：如上图安装 IdeaVim 插件即可。</li>
+</ul>
+</blockquote>
+<h1 id="Intellij-IDEA配置优化"><a href="#Intellij-IDEA配置优化" class="headerlink" title="Intellij IDEA配置优化"></a>Intellij IDEA配置优化</h1><h2 id="优化JVM参数"><a href="#优化JVM参数" class="headerlink" title="优化JVM参数"></a>优化JVM参数</h2><blockquote>
+<p>修改 IntelliJ IDEA 2016.1.2/bin/idea.exe.vmoptions【记得备份】文件，如果是x64系统，修改idea64.exe.vmoptions文件中的参数，具体参数如下</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-Xms512m</span><br><span class="line">-Xmx750m</span><br><span class="line">-Xmn264m</span><br><span class="line">-XX:MaxPermSize=350m</span><br><span class="line">-XX:PermSize=128m</span><br><span class="line">-XX:ReservedCodeCacheSize=240m</span><br><span class="line">-Xverify:none</span><br><span class="line">-Xnoclassgc</span><br><span class="line">-XX:+UseParNewGC</span><br><span class="line">-XX:+UseConcMarkSweepGC</span><br><span class="line">-XX:SoftRefLRUPolicyMSPerMB=50</span><br><span class="line">-ea</span><br><span class="line">-server</span><br><span class="line">-Dsun.io.useCanonCaches=false</span><br><span class="line">-Dsun.awt.keepWorkingSetOnMinimize=true</span><br><span class="line">-Djava.net.preferIPv4Stack=true</span><br><span class="line">-XX:+HeapDumpOnOutOfMemoryError</span><br><span class="line">-XX:-OmitStackTraceInFastThrow</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注：-Xms512m 设置初时的内存大小，提高Java程序的启动速度</p>
+<p>　　　　-Xmx750m 设置最大内存数，提高该值，可以减少内存Garage收集的频率，提高程序性能</p>
+<p>　　　　-Xverify：none 关闭Java字节码验证，从而加快了类装入的速度，并使得在仅为验证目的而启动的过程中无需装入类，缩短了启动时间</p>
+<p>　　　　-XX:+UseParNewGC 使用并行收集算法</p>
+<p>　　　　-server 控制内存garage方式，这样你无需在花一到两分钟等待内存garage的收集</p>
+<p>　　　　-Dsun.awt.keepWorkingSetOnMinimize=true 可以让IDEA最小化到任务栏时依然保持以占有的内存，当你重新回到IDEA，能够被快速显示，而不是由灰白的界面逐渐显现整个界面，加快回复到原界面的速度。</p>
+</blockquote>
+<h1 id="基本常用设置"><a href="#基本常用设置" class="headerlink" title="基本常用设置"></a>基本常用设置</h1><blockquote>
+<p>　　　　显示行号：File -&gt; Settings -&gt; Editor -&gt; General -&gt; Appearance 标签项，勾选Show line numbers</p>
+<p>　　　　让光标不随意定位：File -&gt; Settings -&gt; Editor -&gt; General 标签项中的Virtual Space，去掉Allow placement of caret after end of line</p>
+<p>　　　　用*标识编辑过的文件：File -&gt; Settings -&gt; Editor -&gt; General -&gt; Editor Tabs 标签项中，勾选Mark modified tabs with asterisk</p>
+<p>　　　　取消代码拼写检查：File -&gt; Settings -&gt; Editor -&gt; Inspections 去掉Spelling -&gt; Typo</p>
+<p>　　　　统一编码格式：File -&gt; Settings -&gt; Editor -&gt; File Encodings</p>
+<p>　　　　设置外观字体：File -&gt; Settings -&gt; Appearance &amp; Behavior -&gt; Appearance</p>
+<p>　　　　设置自动保存、自动打开上一次项目：File -&gt; Settings -&gt; Appearance &amp; Behavior -&gt; System Settings 勾选Save files automatically…</p>
+<p>　　　　代码自动补齐(针对小写)：File -&gt; Settings -&gt; Editor -&gt; General -&gt; Code Completion，Case sensitive completion：none</p>
+</blockquote>
+<p><a href="https://www.cnblogs.com/caozengling/p/5668101.html" title="&lt;https://www.cnblogs.com/caozengling/p/5668101.html&gt;"><a href="https://www.cnblogs.com/caozengling/p/5668101.html">https://www.cnblogs.com/caozengling/p/5668101.html</a></a></p>
+<h1 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h1><ul>
+<li><p>visualvm launcher</p>
+</li>
+<li><p> mybatis codehelper pro</p>
+</li>
+<li><p> translation 翻译</p>
+</li>
+<li><p> Rainbow  彩色代码</p>
+</li>
+<li><p> FindBugs-IDEA </p>
+</li>
+<li><p> SonarLint</p>
+</li>
+<li><p>Alibaba Java Coding Guidelines </p>
+</li>
+<li><p>iBATIS/MyBatis plugin 可以在mapper接口中和mapper的xml文件中来回跳转，就想接口跳到实现类那样简单。</p>
+</li>
+<li><p>Stack Overflow </p>
+</li>
+<li><p>Background Image Plus  背景图片 view-&gt;set background image</p>
+</li>
+<li><p>Lombok </p>
+</li>
+<li><p>GenerateSerialVersionUID</p>
+</li>
+<li><p> CamelCase 将不是驼峰格式的名称，快速转成驼峰格式，安装好后，选中要修改的名称，按快捷键shift+alt+u。</p>
+</li>
+<li><p> svn disconnect</p>
+</li>
+</ul>
+<p> Markdown support、Maven Helper </p>
+<p> <a href="https://blog.csdn.net/bntX2jSQfEHy7/article/details/78967219">https://blog.csdn.net/bntX2jSQfEHy7/article/details/78967219</a></p>
+<ul>
+<li><p> codehelper.generator  根据Pojo 文件一键生成 Dao，Service，Xml，Sql文件。 tool-&gt;</p>
+</li>
+<li><p>GsonFormat   一键根据json文本生成java类   alt+insert </p>
+</li>
+<li><p> GenerateAllSetter  set方法生成  new 对象()下一行 tool-&gt;</p>
+</li>
+<li><p>CodeGlance 右边预览</p>
+</li>
+<li><p>Free Mybatis plugin</p>
+</li>
+</ul>
+<blockquote>
+<p>mybatis 插件，让你的mybatis.xml像java代码一样编辑。我们开发中使用mybatis时时长需要通过mapper接口查找对应的xml中的sql语句，该插件方便了我们的操作。</p>
+</blockquote>
+<ul>
+<li>MyBatis Log Plugin</li>
+</ul>
+<blockquote>
+<p>Mybatis现在是java中操作数据库的首选，在开发的时候，我们都会把Mybatis的脚本直接输出在console中，但是默认的情况下，输出的脚本不是一个可以直接执行的</p>
+</blockquote>
+<ul>
+<li><p> activate-power-mode 编写代码效果 屏幕颤抖</p>
+</li>
+<li><p> Nyan progress bar 进度条效果</p>
+</li>
+<li><p>.Rainbow Brackets 彩虹括号</p>
+</li>
+</ul>
+<ul>
+<li><p>.Grep console  自定义日志颜色，idea控制台可以彩色显示各种级别的log，安装完成后，在console中右键就能打开。</p>
+</li>
+<li><p>String Manipulation 强大的字符串转换工具。使用快捷键，Alt+m。</p>
+</li>
+</ul>
+<ul>
+<li>切换样式（camelCase, hyphen-lowercase, HYPHEN-UPPERCASE, snake_case, SCREAMING_SNAKE_CASE, dot.case, words lowercase, Words Capitalized, PascalCase）</li>
+<li>转换为SCREAMING_SNAKE_CASE (或转换为camelCase)</li>
+<li>转换为 snake_case (或转换为camelCase)</li>
+<li>转换为dot.case (或转换为camelCase)</li>
+<li>转换为hyphen-case (或转换为camelCase)</li>
+<li>转换为hyphen-case (或转换为snake_case)</li>
+<li>转换为camelCase (或转换为Words)</li>
+<li>转换为camelCase (或转换为lowercase words)</li>
+<li>转换为PascalCase (或转换为camelCase)</li>
+<li>选定文本大写</li>
+<li>样式反转</li>
+</ul>
+<ul>
+<li>Key promoter </li>
+</ul>
+<p>是IntelliJ IDEA的快捷键提示插件，会统计你鼠标点击某个功能的次数，提示你应该用什么快捷键，帮助记忆快捷键，等熟悉了之后可以关闭掉这个插件。</p>
+<ul>
+<li>Restfultookit </li>
+</ul>
+<p>Spring MVC网页开发的时候，我们都是通过requestmapping的方式来定义页面的URL地址的，为了找到这个地址我们一般都是cmd+shift+F的方式进行查找，大家都知道，我们URL的命名一个是类requestmapping+方法requestmapping，查找的时候还是有那么一点不方便的，restfultookit就能很方便的帮忙进行查找。</p>
+<p>例如：我要找到/user/add 对应的controller,那么只要Ctrl+斜杠 ,（图片来自于网络）</p>
+<ul>
+<li> JRebel  </li>
+</ul>
+<p>JRebel是一种热部署生产力工具，修改代码后不用重新启动程序，所有的更改便可以生效。它跳过了Java开发中常见的重建、重新启动和重新部署周期。</p>
+<p><strong>Gitee</strong><br>开源中国的码云插件<br><a href="https://plugins.jetbrains.com/plugin/8383-gitee">https://plugins.jetbrains.com/plugin/8383-gitee</a></p>
+<p><strong>Alibaba Java Coding Guidelines</strong><br>阿里巴巴出的代码规范检查插件<br><a href="https://plugins.jetbrains.com/plugin/10046-alibaba-java-coding-guidelines">https://plugins.jetbrains.com/plugin/10046-alibaba-java-coding-guidelines</a></p>
+<p><strong>IDE Features Trainer</strong><br>IntelliJ IDEA 官方出的学习辅助插件<br><a href="https://plugins.jetbrains.com/plugin/8554?pr=idea">https://plugins.jetbrains.com/plugin/8554?pr=idea</a></p>
+<p><strong>Key promoter</strong><br>快捷键提示<br><a href="https://plugins.jetbrains.com/plugin/4455?pr=idea">https://plugins.jetbrains.com/plugin/4455?pr=idea</a></p>
+<p><strong>Grep Console</strong><br>自定义设置控制台输出颜色<br><a href="https://plugins.jetbrains.com/idea/plugin/7125-grep-console">https://plugins.jetbrains.com/idea/plugin/7125-grep-console</a></p>
+<p><strong>String Manipulation</strong><br>驼峰式命名和下划线命名交替变化<br><a href="https://plugins.jetbrains.com/plugin/2162?pr=idea">https://plugins.jetbrains.com/plugin/2162?pr=idea</a></p>
+<p><strong>CheckStyle-IDEA</strong><br>代码规范检查<br><a href="https://plugins.jetbrains.com/plugin/1065?pr=idea">https://plugins.jetbrains.com/plugin/1065?pr=idea</a></p>
+<p><strong>FindBugs-IDEA</strong><br>潜在 Bug 检查<br><a href="https://plugins.jetbrains.com/plugin/3847?pr=idea">https://plugins.jetbrains.com/plugin/3847?pr=idea</a></p>
+<p><strong>MetricsReloaded</strong><br>代码复杂度检查<br><a href="https://plugins.jetbrains.com/plugin/93?pr=idea">https://plugins.jetbrains.com/plugin/93?pr=idea</a></p>
+<p><strong>Statistic</strong><br>代码统计<br><a href="https://plugins.jetbrains.com/plugin/4509?pr=idea">https://plugins.jetbrains.com/plugin/4509?pr=idea</a></p>
+<p><strong>JRebel Plugin</strong><br>热部署<br><a href="https://plugins.jetbrains.com/plugin/?id=4441">https://plugins.jetbrains.com/plugin/?id=4441</a></p>
+<p><strong>CodeGlance</strong><br>在编辑代码最右侧，显示一块代码小地图<br><a href="https://plugins.jetbrains.com/plugin/7275?pr=idea">https://plugins.jetbrains.com/plugin/7275?pr=idea</a></p>
+<p><strong>GsonFormat</strong><br>把 JSON 字符串直接实例化成类<br><a href="https://plugins.jetbrains.com/plugin/7654?pr=idea">https://plugins.jetbrains.com/plugin/7654?pr=idea</a></p>
+<p><strong>Markdown Navigator</strong><br>书写 Markdown 文章<br><a href="https://plugins.jetbrains.com/plugin/7896?pr=idea">https://plugins.jetbrains.com/plugin/7896?pr=idea</a></p>
+<p><strong>Eclipse Code Formatter</strong><br>使用 Eclipse 的代码格式化风格，在一个团队中如果公司有规定格式化风格，这个可以使用。<br><a href="https://plugins.jetbrains.com/plugin/6546?pr=idea">https://plugins.jetbrains.com/plugin/6546?pr=idea</a></p>
+<p><strong>Jindent-Source Code Formatter</strong><br>自定义类、方法、doc、变量注释模板<br><a href="http://plugins.jetbrains.com/plugin/2170?pr=idea">http://plugins.jetbrains.com/plugin/2170?pr=idea</a></p>
+<p><strong>Translation</strong><br>翻译插件<br><a href="https://github.com/YiiGuxing/TranslationPlugin">https://github.com/YiiGuxing/TranslationPlugin</a></p>
+<p><strong>Maven Helper</strong><br>Maven 辅助插件<br><a href="https://plugins.jetbrains.com/plugin/7179-maven-helper">https://plugins.jetbrains.com/plugin/7179-maven-helper</a></p>
+<p><strong>Properties to YAML Converter</strong><br>把 Properties 的配置格式改为 YAML 格式<br><a href="https://plugins.jetbrains.com/plugin/8000-properties-to-yaml-converter">https://plugins.jetbrains.com/plugin/8000-properties-to-yaml-converter</a></p>
+<p><strong>Git Flow Integration</strong><br>Git Flow 的图形界面操作<br><a href="https://plugins.jetbrains.com/plugin/7315-git-flow-integration">https://plugins.jetbrains.com/plugin/7315-git-flow-integration</a></p>
+<p><strong>Rainbow Brackets</strong><br>对各个对称括号进行着色，方便查看<br><a href="https://github.com/izhangzhihao/intellij-rainbow-brackets">https://github.com/izhangzhihao/intellij-rainbow-brackets</a></p>
+<p><strong>MybatisX</strong><br>mybatis 框架辅助（免费）<br><a href="https://plugins.jetbrains.com/plugin/10119-mybatisx">https://plugins.jetbrains.com/plugin/10119-mybatisx</a></p>
+<p><strong>Lombok Plugin</strong><br>Lombok 功能辅助插件<br><a href="https://plugins.jetbrains.com/plugin/6317-lombok-plugin">https://plugins.jetbrains.com/plugin/6317-lombok-plugin</a></p>
+<p><strong>.ignore</strong><br>各类版本控制忽略文件生成工具<br><a href="https://plugins.jetbrains.com/plugin/7495--ignore">https://plugins.jetbrains.com/plugin/7495--ignore</a></p>
+<p><strong>mongo4idea</strong><br>mongo客户端<br><a href="https://github.com/dboissier/mongo4idea">https://github.com/dboissier/mongo4idea</a></p>
+<p><strong>GenerateAllSetter</strong><br>new POJO类的快速生成 set 方法<br><a href="https://plugins.jetbrains.com/plugin/9360-generateallsetter">https://plugins.jetbrains.com/plugin/9360-generateallsetter</a></p>
+<h1 id="注册码-idea2019"><a href="#注册码-idea2019" class="headerlink" title="注册码 idea2019"></a>注册码 idea2019</h1><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">56ZS5PQ1RF-eyJsaWNlbnNlSWQiOiI1NlpTNVBRMVJGIiwibGljZW5zZWVOYW1lIjoi5q2j54mI5o6I5p2DIC4iLCJhc3NpZ25lZU5hbWUiOiIiLCJhc3NpZ25lZUVtYWlsIjoiIiwibGljZW5zZVJlc3RyaWN0aW9uIjoiRm9yIGVkdWNhdGlvbmFsIHVzZSBvbmx5IiwiY2hlY2tDb25jdXJyZW50VXNlIjpmYWxzZSwicHJvZHVjdHMiOlt7ImNvZGUiOiJJSSIsInBhaWRVcFRvIjoiMjAyMC0wMy0xMCJ9LHsiY29kZSI6IkFDIiwicGFpZFVwVG8iOiIyMDIwLTAzLTEwIn0seyJjb2RlIjoiRFBOIiwicGFpZFVwVG8iOiIyMDIwLTAzLTEwIn0seyJjb2RlIjoiUFMiLCJwYWlkVXBUbyI6IjIwMjAtMDMtMTAifSx7ImNvZGUiOiJHTyIsInBhaWRVcFRvIjoiMjAyMC0wMy0xMCJ9LHsiY29kZSI6IkRNIiwicGFpZFVwVG8iOiIyMDIwLTAzLTEwIn0seyJjb2RlIjoiQ0wiLCJwYWlkVXBUbyI6IjIwMjAtMDMtMTAifSx7ImNvZGUiOiJSUzAiLCJwYWlkVXBUbyI6IjIwMjAtMDMtMTAifSx7ImNvZGUiOiJSQyIsInBhaWRVcFRvIjoiMjAyMC0wMy0xMCJ9LHsiY29kZSI6IlJEIiwicGFpZFVwVG8iOiIyMDIwLTAzLTEwIn0seyJjb2RlIjoiUEMiLCJwYWlkVXBUbyI6IjIwMjAtMDMtMTAifSx7ImNvZGUiOiJSTSIsInBhaWRVcFRvIjoiMjAyMC0wMy0xMCJ9LHsiY29kZSI6IldTIiwicGFpZFVwVG8iOiIyMDIwLTAzLTEwIn0seyJjb2RlIjoiREIiLCJwYWlkVXBUbyI6IjIwMjAtMDMtMTAifSx7ImNvZGUiOiJEQyIsInBhaWRVcFRvIjoiMjAyMC0wMy0xMCJ9LHsiY29kZSI6IlJTVSIsInBhaWRVcFRvIjoiMjAyMC0wMy0xMCJ9XSwiaGFzaCI6IjEyMjkxNDk4LzAiLCJncmFjZVBlcmlvZERheXMiOjAsImF1dG9Qcm9sb25nYXRlZCI6ZmFsc2UsImlzQXV0b1Byb2xvbmdhdGVkIjpmYWxzZX0=-SYSsDcgL1WJmHnsiGaHUWbaZLPIe2oI3QiIneDtaIbh/SZOqu63G7RGudSjf3ssPb1zxroMti/bK9II1ugHz/nTjw31Uah7D0HqeaCO7Zc0q9BeHysiWmBZ+8bABs5vr25GgIa5pO7CJhL7RitXQbWpAajrMBAeZ2En3wCgNwT6D6hNmiMlhXsWgwkw2OKnyHZ2dl8yEL+oV5SW14t7bdjYGKQrYjSd4+2zc4FnaX88yLnGNO9B3U6G+BuM37pxS5MjHrkHqMTK8W3I66mIj6IB6dYXD5nvKKO1OZREBAr6LV0BqRYSbuJKFhZ8nd6YDG20GvW6leimv0rHVBFmA0w==-MIIElTCCAn2gAwIBAgIBCTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE4MTEwMTEyMjk0NloXDTIwMTEwMjEyMjk0NlowaDELMAkGA1UEBhMCQ1oxDjAMBgNVBAgMBU51c2xlMQ8wDQYDVQQHDAZQcmFndWUxGTAXBgNVBAoMEEpldEJyYWlucyBzLnIuby4xHTAbBgNVBAMMFHByb2QzeS1mcm9tLTIwMTgxMTAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxcQkq+zdxlR2mmRYBPzGbUNdMN6OaXiXzxIWtMEkrJMO/5oUfQJbLLuMSMK0QHFmaI37WShyxZcfRCidwXjot4zmNBKnlyHodDij/78TmVqFl8nOeD5+07B8VEaIu7c3E1N+e1doC6wht4I4+IEmtsPAdoaj5WCQVQbrI8KeT8M9VcBIWX7fD0fhexfg3ZRt0xqwMcXGNp3DdJHiO0rCdU+Itv7EmtnSVq9jBG1usMSFvMowR25mju2JcPFp1+I4ZI+FqgR8gyG8oiNDyNEoAbsR3lOpI7grUYSvkB/xVy/VoklPCK2h0f0GJxFjnye8NT1PAywoyl7RmiAVRE/EKwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl/GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQAF8uc+YJOHHwOFcPzmbjcxNDuGoOUIP+2h1R75Lecswb7ru2LWWSUMtXVKQzChLNPn/72W0k+oI056tgiwuG7M49LXp4zQVlQnFmWU1wwGvVhq5R63Rpjx1zjGUhcXgayu7+9zMUW596Lbomsg8qVve6euqsrFicYkIIuUu4zYPndJwfe0YkS5nY72SHnNdbPhEnN8wcB2Kz+OIG0lih3yz5EqFhld03bGp222ZQCIghCTVL6QBNadGsiN/lWLl4JdR3lJkZzlpFdiHijoVRdWeSWqM4y0t23c92HXKrgppoSV18XMxrWVdoSM3nuMHwxGhFyde05OdDtLpCv+jlWf5REAHHA201pAU6bJSZINyHDUTB+Beo28rRXSwSh3OUIvYwKNVeoBY+KwOJ7WnuTCUq1meE6GkKc4D/cXmgpOyW/1SmBz3XjVIi/zprZ0zf3qH5mkphtg6ksjKgKjmx1cXfZAAX6wcDBNaCL+Ortep1Dh8xDUbqbBVNBL4jbiL3i3xsfNiyJgaZ5sX7i8tmStEpLbPwvHcByuf59qJhV/bZOl8KqJBETCDJcY6O2aqhTUy+9x93ThKs1GKrRPePrWPluud7ttlgtRveit/pcBrnQcXOl1rHq7ByB8CFAxNotRUYL9IF5n3wJOgkPojMy6jetQA5Ogc8Sm7RG6vg1yow==</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="2018正版授权码"><a href="#2018正版授权码" class="headerlink" title="2018正版授权码"></a>2018正版授权码</h1><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">2DZ8RPRSBU-eyJsaWNlbnNlSWQiOiIyRFo4UlBSU0JVIiwibGljZW5zZWVOYW1lIjoiY24gdHUiLCJhc3NpZ25lZU5hbWUiOiIiLCJhc3NpZ25lZUVtYWlsIjoiIiwibGljZW5zZVJlc3RyaWN0aW9uIjoiRm9yIGVkdWNhdGlvbmFsIHVzZSBvbmx5IiwiY2hlY2tDb25jdXJyZW50VXNlIjpmYWxzZSwicHJvZHVjdHMiOlt7ImNvZGUiOiJJSSIsInBhaWRVcFRvIjoiMjAxOS0wNy0yOCJ9LHsiY29kZSI6IlJTMCIsInBhaWRVcFRvIjoiMjAxOS0wNy0yOCJ9LHsiY29kZSI6IldTIiwicGFpZFVwVG8iOiIyMDE5LTA3LTI4In0seyJjb2RlIjoiUkQiLCJwYWlkVXBUbyI6IjIwMTktMDctMjgifSx7ImNvZGUiOiJSQyIsInBhaWRVcFRvIjoiMjAxOS0wNy0yOCJ9LHsiY29kZSI6IkRDIiwicGFpZFVwVG8iOiIyMDE5LTA3LTI4In0seyJjb2RlIjoiREIiLCJwYWlkVXBUbyI6IjIwMTktMDctMjgifSx7ImNvZGUiOiJSTSIsInBhaWRVcFRvIjoiMjAxOS0wNy0yOCJ9LHsiY29kZSI6IkRNIiwicGFpZFVwVG8iOiIyMDE5LTA3LTI4In0seyJjb2RlIjoiQUMiLCJwYWlkVXBUbyI6IjIwMTktMDctMjgifSx7ImNvZGUiOiJEUE4iLCJwYWlkVXBUbyI6IjIwMTktMDctMjgifSx7ImNvZGUiOiJHTyIsInBhaWRVcFRvIjoiMjAxOS0wNy0yOCJ9LHsiY29kZSI6IlBTIiwicGFpZFVwVG8iOiIyMDE5LTA3LTI4In0seyJjb2RlIjoiQ0wiLCJwYWlkVXBUbyI6IjIwMTktMDctMjgifSx7ImNvZGUiOiJQQyIsInBhaWRVcFRvIjoiMjAxOS0wNy0yOCJ9LHsiY29kZSI6IlJTVSIsInBhaWRVcFRvIjoiMjAxOS0wNy0yOCJ9XSwiaGFzaCI6Ijk3MDU1NjEvMCIsImdyYWNlUGVyaW9kRGF5cyI6MCwiYXV0b1Byb2xvbmdhdGVkIjpmYWxzZSwiaXNBdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlfQ==-WJc5TNMU/wdSqz+DA2MV6sweSRrJCr5IZpTk21WIa2mxKksn3moaDQseF/d/wcDlKEMlmtqdTL/WFPhNDLycga6ycslHu2XOXYqNLbPZhlH5UuZbtlpY+9qH3rwr0Vr0usdNbyTFZBaqiAxubP32hOQENdGWkwsdiAthVKxwFo4jpBj6IsFLzR0CeEP4qW82TpELboynTjCRoCu5RFv63OXrKsk3+YraKCRH0YxOR4rpaJRl/4kIETAAHOZXMi5ipLWohZsmMWLnGt8DmRsCjEjOcYdAkW6uazSkaaHaCSF+jsgRalR0y7pqSncrAGTqcMlrkdiLWYqnZ5ghsYbomg==-MIIEPjCCAiagAwIBAgIBBTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE1MTEwMjA4MjE0OFoXDTE4MTEwMTA4MjE0OFowETEPMA0GA1UEAwwGcHJvZDN5MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxcQkq+zdxlR2mmRYBPzGbUNdMN6OaXiXzxIWtMEkrJMO/5oUfQJbLLuMSMK0QHFmaI37WShyxZcfRCidwXjot4zmNBKnlyHodDij/78TmVqFl8nOeD5+07B8VEaIu7c3E1N+e1doC6wht4I4+IEmtsPAdoaj5WCQVQbrI8KeT8M9VcBIWX7fD0fhexfg3ZRt0xqwMcXGNp3DdJHiO0rCdU+Itv7EmtnSVq9jBG1usMSFvMowR25mju2JcPFp1+I4ZI+FqgR8gyG8oiNDyNEoAbsR3lOpI7grUYSvkB/xVy/VoklPCK2h0f0GJxFjnye8NT1PAywoyl7RmiAVRE/EKwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl/GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQC9WZuYgQedSuOc5TOUSrRigMw4/+wuC5EtZBfvdl4HT/8vzMW/oUlIP4YCvA0XKyBaCJ2iX+ZCDKoPfiYXiaSiH+HxAPV6J79vvouxKrWg2XV6ShFtPLP+0gPdGq3x9R3+kJbmAm8w+FOdlWqAfJrLvpzMGNeDU14YGXiZ9bVzmIQbwrBA+c/F4tlK/DV07dsNExihqFoibnqDiVNTGombaU2dDup2gwKdL81ua8EIcGNExHe82kjF4zwfadHk3bQVvbfdAwxcDy4xBjs3L4raPLU3yenSzr/OEur1+jfOxnQSmEcMXKXgrAQ9U55gwjcOFKrgOxEdek/Sk1VfOjvS+nuM4eyEruFMfaZHzoQiuw4IqgGc45ohFH0UUyjYcuFxxDSU9lMCv8qdHKm+wnPRb0l9l5vXsCBDuhAGYD6ss+Ga+aDY6f/qXZuUCEUOH3QUNbbCUlviSz6+GiRnt1kA9N2Qachl+2yBfaqUqr8h7Z2gsx5LcIf5kYNsqJ0GavXTVyWh7PYiKX4bs354ZQLUwwa/cG++2+wNWP+HtBhVxMRNTdVhSm38AknZlD+PTAsWGu9GyLmhti2EnVwGybSD2Dxmhxk3IPCkhKAK+pl0eWYGZWG3tJ9mZ7SowcXLWDFAk0lRJnKGFMTggrWjV8GYpw5bq23VmIqqDLgkNzuoog==</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="java文件夹编译xml"><a href="#java文件夹编译xml" class="headerlink" title="java文件夹编译xml"></a>java文件夹编译xml</h1><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/java<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.xml<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>原因： <strong>IDEA的Maven是不会编译src的java目录的xml文件，所以在Mybatis的配置文件中找不到xml文件！</strong></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>idea</category>
+      </categories>
+      <tags>
+        <tag>idea</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mybatisplus生成.md</title>
+    <url>/2021/06/07/mybatisplus/mybatisplus%E7%94%9F%E6%88%90/</url>
+    <content><![CDATA[<h2 id="自动生成实体类"><a href="#自动生成实体类" class="headerlink" title="自动生成实体类"></a>自动生成实体类</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo;</span><br><span class="line"><span class="keyword">import</span> cn.hutool.core.collection.ListUtil;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.IdType;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.core.toolkit.StringPool;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.core.toolkit.StringUtils;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.AutoGenerator;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.InjectionConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.*;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.po.TableInfo;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;</span><br><span class="line"><span class="keyword">import</span> io.swagger.annotations.ApiModel;</span><br><span class="line"><span class="keyword">import</span> java.sql.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: TODO[加点注释吧]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ClassName</span>: Auto</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: rocky</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/6/3 21:36</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Auto</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * &lt;p&gt;</span></span><br><span class="line"><span class="comment">     * 读取控制台内容</span></span><br><span class="line"><span class="comment">     * &lt;/p&gt;</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">scanner</span><span class="params">(String tip)</span> </span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        StringBuilder help = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        help.append(<span class="string">&quot;请输入&quot;</span> + tip + <span class="string">&quot;：&quot;</span>);</span><br><span class="line">        System.out.println(help.toString());</span><br><span class="line">        <span class="keyword">if</span> (scanner.hasNext()) &#123;</span><br><span class="line">            String ipt = scanner.next();</span><br><span class="line">            <span class="keyword">if</span> (StringUtils.isNotBlank(ipt)) &#123;</span><br><span class="line">                <span class="keyword">return</span> ipt;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> MybatisPlusException(<span class="string">&quot;请输入正确的&quot;</span> + tip + <span class="string">&quot;！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">genMenthod</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 代码生成器</span></span><br><span class="line">        AutoGenerator mpg = <span class="keyword">new</span> AutoGenerator();</span><br><span class="line">        <span class="comment">// 全局配置</span></span><br><span class="line">        GlobalConfig gc = <span class="keyword">new</span> GlobalConfig();</span><br><span class="line">        String projectPath = System.getProperty(<span class="string">&quot;user.dir&quot;</span>);</span><br><span class="line">        gc.setOutputDir(projectPath + <span class="string">&quot;/src/main/java&quot;</span>);</span><br><span class="line">        <span class="comment">// TODO TODO AUTOR</span></span><br><span class="line">        gc.setAuthor(<span class="string">&quot;rocky&quot;</span>);</span><br><span class="line">        gc.setIdType(IdType.AUTO);</span><br><span class="line">        gc.setOpen(<span class="keyword">false</span>);</span><br><span class="line">        gc.setSwagger2(<span class="keyword">true</span>); <span class="comment">//实体属性 Swagger2 注解</span></span><br><span class="line">        mpg.setGlobalConfig(gc);</span><br><span class="line">        <span class="comment">// 数据源配置</span></span><br><span class="line">        DataSourceConfig dsc = <span class="keyword">new</span> DataSourceConfig();</span><br><span class="line">        <span class="comment">// TODO TODO URL/USER/PWD</span></span><br><span class="line">        dsc.setUrl(url);</span><br><span class="line">        <span class="comment">// dsc.setSchemaName(&quot;public&quot;);</span></span><br><span class="line">        dsc.setDriverName(driverName);</span><br><span class="line">        dsc.setUsername(user);</span><br><span class="line">        dsc.setPassword(password);</span><br><span class="line">        mpg.setDataSource(dsc);</span><br><span class="line">        <span class="comment">// 包配置</span></span><br><span class="line">        PackageConfig pc = <span class="keyword">new</span> PackageConfig();</span><br><span class="line">        pc.setModuleName(scanner(<span class="string">&quot;模块名&quot;</span>));</span><br><span class="line">        pc.setParent(<span class="string">&quot;com.baomidou.ant&quot;</span>);</span><br><span class="line">        mpg.setPackageInfo(pc);</span><br><span class="line">        <span class="comment">// 自定义配置</span></span><br><span class="line">        InjectionConfig cfg = <span class="keyword">new</span> InjectionConfig() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="comment">// to do nothing</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">// 如果模板引擎是 freemarker</span></span><br><span class="line">        String templatePath = <span class="string">&quot;/templates/mapper.xml.ftl&quot;</span>;</span><br><span class="line">        <span class="comment">// 如果模板引擎是 velocity</span></span><br><span class="line">        <span class="comment">// String templatePath = &quot;/templates/mapper.xml.vm&quot;;</span></span><br><span class="line">        <span class="comment">// 自定义输出配置</span></span><br><span class="line">        List&lt;FileOutConfig&gt; focList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">// 自定义配置会被优先输出</span></span><br><span class="line">        focList.add(<span class="keyword">new</span> FileOutConfig(templatePath) &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> String <span class="title">outputFile</span><span class="params">(TableInfo tableInfo)</span> </span>&#123;</span><br><span class="line">                <span class="comment">// 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！</span></span><br><span class="line">                <span class="keyword">return</span> projectPath + <span class="string">&quot;/src/main/resources/mapper/&quot;</span> + pc.getModuleName() + <span class="string">&quot;/&quot;</span> + tableInfo.getEntityName() + <span class="string">&quot;Mapper&quot;</span> + StringPool.DOT_XML;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        cfg.setFileCreate(new IFileCreate() &#123;</span></span><br><span class="line"><span class="comment">            @Override</span></span><br><span class="line"><span class="comment">            public boolean isCreate(ConfigBuilder configBuilder, FileType fileType, String filePath) &#123;</span></span><br><span class="line"><span class="comment">                // 判断自定义文件夹是否需要创建</span></span><br><span class="line"><span class="comment">                checkDir(&quot;调用默认方法创建的目录&quot;);</span></span><br><span class="line"><span class="comment">                return false;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;);</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        cfg.setFileOutConfigList(focList);</span><br><span class="line">        mpg.setCfg(cfg);</span><br><span class="line">        <span class="comment">// 配置模板</span></span><br><span class="line">        TemplateConfig templateConfig = <span class="keyword">new</span> TemplateConfig();</span><br><span class="line">        <span class="comment">// 配置自定义输出模板</span></span><br><span class="line">        <span class="comment">//指定自定义模板路径，注意不要带上.ftl/.vm, 会根据使用的模板引擎自动识别</span></span><br><span class="line">        <span class="comment">// templateConfig.setEntity(&quot;templates/entity2.java&quot;);</span></span><br><span class="line">        <span class="comment">// templateConfig.setService();</span></span><br><span class="line">        <span class="comment">// templateConfig.setController();</span></span><br><span class="line">        templateConfig.setXml(<span class="keyword">null</span>);</span><br><span class="line">        mpg.setTemplate(templateConfig);</span><br><span class="line">        <span class="comment">// 策略配置</span></span><br><span class="line">        StrategyConfig strategy = <span class="keyword">new</span> StrategyConfig();</span><br><span class="line">        strategy.setNaming(NamingStrategy.underline_to_camel);</span><br><span class="line">        strategy.setColumnNaming(NamingStrategy.underline_to_camel);</span><br><span class="line"><span class="comment">//        strategy.setSuperEntityClass(&quot;com.baomidou.ant.common.BaseEntity&quot;);</span></span><br><span class="line">        strategy.setEntityLombokModel(<span class="keyword">true</span>);</span><br><span class="line">        strategy.setRestControllerStyle(<span class="keyword">true</span>);</span><br><span class="line">        <span class="comment">// 公共父类</span></span><br><span class="line"><span class="comment">//        strategy.setSuperControllerClass(&quot;com.baomidou.ant.common.BaseController&quot;);</span></span><br><span class="line">        <span class="comment">// 写于父类中的公共字段</span></span><br><span class="line"><span class="comment">//        strategy.setSuperEntityColumns(&quot;id&quot;);</span></span><br><span class="line">        <span class="comment">// TODO 输出单个表，或者多个</span></span><br><span class="line"><span class="comment">//        strategy.setInclude(scanner(&quot;表名，多个英文逗号分割&quot;).split(&quot;,&quot;));</span></span><br><span class="line">        <span class="comment">//输出全部表</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            strategy.setInclude(<span class="keyword">this</span>.getTableNames().split(<span class="string">&quot;,&quot;</span>));</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException throwables) &#123;</span><br><span class="line">            throwables.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        strategy.setControllerMappingHyphenStyle(<span class="keyword">true</span>);</span><br><span class="line">        strategy.setTablePrefix(pc.getModuleName() + <span class="string">&quot;_&quot;</span>);</span><br><span class="line">        mpg.setStrategy(strategy);</span><br><span class="line">        mpg.setTemplateEngine(<span class="keyword">new</span> FreemarkerTemplateEngine());</span><br><span class="line">        mpg.execute();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Auto().genMenthod();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> String driverName = <span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> String url = <span class="string">&quot;jdbc:mysql://localhost:3306/mp?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> String user = <span class="string">&quot;root&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> String password = <span class="string">&quot;root&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> Connection conn = <span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> <span class="keyword">throws</span> ClassNotFoundException, SQLException </span>&#123;</span><br><span class="line">        Class.forName(driverName);</span><br><span class="line">        conn = DriverManager.getConnection(url, user, password);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@Description</span> 获取所有的数据库表注释</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@reason</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> Map&lt;String, String&gt; <span class="title">getTableComment</span><span class="params">()</span> <span class="keyword">throws</span> ClassNotFoundException, SQLException </span>&#123;</span><br><span class="line">        init(); <span class="comment">//初始化数据库连接</span></span><br><span class="line">        Map&lt;String, String&gt; maps = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</span><br><span class="line">        PreparedStatement pstate = conn.prepareStatement(<span class="string">&quot;show table status&quot;</span>);</span><br><span class="line">        ResultSet results = pstate.executeQuery();</span><br><span class="line">        <span class="keyword">while</span> (results.next()) &#123;</span><br><span class="line">            String tableName = results.getString(<span class="string">&quot;NAME&quot;</span>);</span><br><span class="line">            String comment = results.getString(<span class="string">&quot;COMMENT&quot;</span>);</span><br><span class="line">            maps.put(tableName, comment);</span><br><span class="line">        &#125;</span><br><span class="line">        pstate.close();</span><br><span class="line">        <span class="keyword">return</span> maps;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@Description</span> 获取所有的数据库表注释</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@reason</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getTableNames</span><span class="params">()</span> <span class="keyword">throws</span> ClassNotFoundException, SQLException </span>&#123;</span><br><span class="line">        init(); <span class="comment">//初始化数据库连接</span></span><br><span class="line">        StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        PreparedStatement pstate = conn.prepareStatement(<span class="string">&quot;show table status&quot;</span>);</span><br><span class="line">        ResultSet results = pstate.executeQuery();</span><br><span class="line">        <span class="keyword">while</span> (results.next()) &#123;</span><br><span class="line">            String tableName = results.getString(<span class="string">&quot;NAME&quot;</span>);</span><br><span class="line">            stringBuilder.append(tableName);</span><br><span class="line">            stringBuilder.append(<span class="string">&quot;,&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        pstate.close();</span><br><span class="line">        String s = stringBuilder.toString();</span><br><span class="line">        <span class="keyword">return</span> s.substring(<span class="number">0</span>, s.length() - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="xml-包坐标"><a href="#xml-包坐标" class="headerlink" title="xml 包坐标"></a>xml 包坐标</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.4.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>demo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>demo<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Demo project for Spring Boot<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.freemarker<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>freemarker<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.31<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.0.13<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-generator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.6.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">excludes</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">exclude</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">exclude</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">excludes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>mybatisPlus</category>
+      </categories>
+      <tags>
+        <tag>mybatisPlus</tag>
       </tags>
   </entry>
 </search>
